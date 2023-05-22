@@ -3,7 +3,8 @@ import { FC } from "react";
 import Button from "../button/Button";
 
 import logo from "../../assets/img/header/logo.svg";
-
+import OpMenuTablet from "../../assets/img/header/menu-default-tablet.svg";
+import OpMenuMob from "../../assets/img/header/menu-default-mobile.svg";
 import { headerLink } from "../../core/constants/constants";
 import { THeaderLink } from "../../core/constants/constants.types";
 
@@ -15,7 +16,7 @@ const Header: FC = () => {
       <div className="header-logo">
         <img src={logo} alt="logo" />
       </div>
-      <nav className="header-nav">
+      <nav className="header-nav-desktop">
         {headerLink &&
           headerLink.map((link: THeaderLink, i: number) => (
             <a href={link.link} key={i} className="header-nav__link">
@@ -26,6 +27,13 @@ const Header: FC = () => {
           оставить заявку
         </Button>
       </nav>
+
+      <Button classProps="header__active-burgerMenu-tab" type="button">
+        <img src={OpMenuTablet} alt="open burger menu" />
+      </Button>
+      <Button classProps="header__active-burgerMenu-mobile" type="button">
+        <img src={OpMenuMob} alt="open burger menu" />
+      </Button>
     </header>
   );
 };
