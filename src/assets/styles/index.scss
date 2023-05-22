@@ -1,0 +1,40 @@
+@import "reset.scss";
+@import "fonts.scss";
+
+:root {
+  --background-color-light: #fff;
+  --background-color-dark: #000;
+
+  --color-brown: #331110;
+  --color-orange: #f98a09;
+  --color-dark-orange:#D66300;
+  --color-white: #fff;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: "AnonymousPro";
+  color: #331110;
+  background-color: var(--background-color-light);
+}
+
+a {
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
