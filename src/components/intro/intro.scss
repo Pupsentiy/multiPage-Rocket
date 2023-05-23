@@ -2,7 +2,7 @@
 
 .intro {
   background-color: var(--background-color-orage);
-  padding: 188px 0;
+  padding: 188px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +13,7 @@
 
   @media (max-width: $breakpoint_xs) {
     min-height: calc(100vh - 74px);
-    padding: 80px 0;
+    padding: 80px 10px;
   }
   .intro__title {
     text-align: center;

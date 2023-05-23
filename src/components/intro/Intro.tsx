@@ -1,7 +1,8 @@
 import { FC } from "react";
 
-import "./intro.scss";
 import Button from "../button/Button";
+
+import "./intro.scss";
 
 const Intro: FC = () => {
   return (
@@ -12,7 +13,7 @@ const Intro: FC = () => {
           <br />
           <span>БЫСТРЕЕ, КАЧЕСТВЕННЕЕ И ДЕШЕВЛЕ</span> <br />
           С ПОМОЩЬЮ
-         <br className="intro-br"/> <span>РОКЕТСОФТ</span>
+          <br className="intro-br" /> <span>РОКЕТСОФТ</span>
         </h1>
 
         <div className="intro-links">

@@ -7,6 +7,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 17px 50px;
+    @media (max-width: $breakpoint_xs) {
+     padding: 8px 16px;
+    }
 
     .header-logo {
       margin-right: 5px;

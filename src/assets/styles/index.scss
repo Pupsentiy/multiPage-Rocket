@@ -6,14 +6,16 @@
   --background-color-light: #fff;
   --background-color-dark: #000;
   --background-color-orage: #f98a09;
-  --background-color-brown:#331110;
-  
+  --background-color-brown: #331110;
+
   --color-brown: #331110;
   --color-orange: #f98a09;
   --color-dark-orange: #d66300;
   --color-white: #fff;
   --color-beige: #f3eeea;
   --color-transparent: transparent;
+  --color-aqua: #00DFCE;
+
 }
 
 html {
@@ -28,6 +30,7 @@ body {
   height: 100%;
   font-size: 18px;
   line-height: 20px;
+  font-weight: 400;
   font-family: $default-font;
   color: var(--color-brown);
   background-color: var(--background-color-light);
@@ -79,4 +82,11 @@ h1 {
     font-size: 28px;
     line-height: 28px;
   }
+}
+
+h4 {
+  font-family: $poppins-font;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
 }

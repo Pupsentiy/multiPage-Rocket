@@ -1,0 +1,62 @@
+@import "../../assets/styles/variables.scss";
+
+.our-mission {
+  padding: 130px 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: $breakpoint_xs) {
+   padding: 70px 10px;
+  }
+  .our-mission-label {
+    padding: 6px 14px;
+    color: var(--color-white);
+    background-color: var(--color-aqua);
+  }
+
+  .our-mission-wrapper-title {
+    margin-top: 20px;
+    .our-mission__title {
+      text-align: center;
+      span {
+        color: var(--color-orange);
+      }
+    }
+  }
+
+  .our-mission__description {
+    margin-top: 20px;
+    text-align: center;
+    max-width: 60%;
+    @media (max-width: $breakpoint_lg) {
+      max-width: 80%;
+      font-size: 24px;
+      line-height: 27px;
+    }
+
+    @media (max-width: $breakpoint_sm) {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  .our-mission__button {
+    margin-top: 40px;
+    padding: 14px 40px;
+    border: 2px solid var(--color-brown);
+    font-size: 18px;
+    line-height: 25px;
+
+    &:hover {
+      background-color: var(--color-orange);
+      border: 2px solid var(--color-transparent);
+    }
+
+    &:active {
+      background-color: var(--color-dark-orange);
+      border: 2px solid var(--color-transparent);
+    }
+  }
+}
