@@ -13,27 +13,31 @@ import "./header.scss";
 const Header: FC = () => {
   return (
     <header className="header">
-      <div className="header-logo">
-        <img src={logo} alt="logo" />
-      </div>
-      <nav className="header-nav-desktop">
-        {headerLink &&
-          headerLink.map((link: THeaderLink, i: number) => (
-            <a href={link.link} key={i} className="header-nav__link">
-              {link.title}
-            </a>
-          ))}
-        <Button type="button" classProps="header-nav__button">
-          оставить заявку
-        </Button>
-      </nav>
+      <div className="container-main">
+        <div className="header-content">
+          <div className="header-logo">
+            <img src={logo} alt="logo" />
+          </div>
+          <nav className="header-nav-desktop">
+            {headerLink &&
+              headerLink.map((link: THeaderLink, i: number) => (
+                <a href={link.link} key={i} className="header-nav__link">
+                  {link.title}
+                </a>
+              ))}
+            <Button type="button" classProps="header-nav__button">
+              оставить заявку
+            </Button>
+          </nav>
 
-      <Button classProps="header__active-burgerMenu-tab" type="button">
-        <img src={OpMenuTablet} alt="open burger menu" />
-      </Button>
-      <Button classProps="header__active-burgerMenu-mobile" type="button">
-        <img src={OpMenuMob} alt="open burger menu" />
-      </Button>
+          <Button classProps="header__active-burgerMenu-tab" type="button">
+            <img src={OpMenuTablet} alt="open burger menu" />
+          </Button>
+          <Button classProps="header__active-burgerMenu-mobile" type="button">
+            <img src={OpMenuMob} alt="open burger menu" />
+          </Button>
+        </div>
+      </div>
     </header>
   );
 };

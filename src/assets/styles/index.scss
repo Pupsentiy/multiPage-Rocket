@@ -1,14 +1,19 @@
-@import "reset.scss";
-@import "fonts.scss";
+@import "./reset.scss";
+@import "./fonts.scss";
+@import "./variables.scss";
 
 :root {
   --background-color-light: #fff;
   --background-color-dark: #000;
-
+  --background-color-orage: #f98a09;
+  --background-color-brown:#331110;
+  
   --color-brown: #331110;
   --color-orange: #f98a09;
-  --color-dark-orange:#D66300;
+  --color-dark-orange: #d66300;
   --color-white: #fff;
+  --color-beige: #f3eeea;
+  --color-transparent: transparent;
 }
 
 html {
@@ -23,8 +28,8 @@ body {
   height: 100%;
   font-size: 18px;
   line-height: 20px;
-  font-family: "AnonymousPro";
-  color: #331110;
+  font-family: $default-font;
+  color: var(--color-brown);
   background-color: var(--background-color-light);
 }
 
@@ -34,7 +39,44 @@ a {
   transition: all 0.25s ease;
 }
 
-main {
+button {
+  font-family: $poppins-font;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.container-main {
   max-width: 1440px;
   margin: 0 auto;
+  @media (max-width: $breakpoint_xxl) {
+    max-width: 1320px;
+  }
+  @media (max-width: $breakpoint_xl) {
+    max-width: 1140px;
+  }
+  @media (max-width: $breakpoint_lg) {
+    max-width: 960px;
+  }
+  @media (max-width: $breakpoint_md) {
+    max-width: 720px;
+  }
+  @media (max-width: $breakpoint_sm) {
+    max-width: 540px;
+  }
+  @media (max-width: $breakpoint_xs) {
+    max-width: auto;
+  }
+}
+
+h1 {
+  font-family: $poppins-font;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  color: var(--color-brown);
+
+  @media (max-width: $breakpoint_sm) {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
