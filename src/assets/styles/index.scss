@@ -5,8 +5,10 @@
 :root {
   --background-color-light: #fff;
   --background-color-dark: #000;
-  --background-color-orage: #f98a09;
   --background-color-brown: #331110;
+  --background-color-light-orange: #ffa220;
+  --background-color-orage: #f98a09;
+  --background-colot-beige: #f3eeea;
 
   --color-brown: #331110;
   --color-orange: #f98a09;
@@ -14,8 +16,7 @@
   --color-white: #fff;
   --color-beige: #f3eeea;
   --color-transparent: transparent;
-  --color-aqua: #00DFCE;
-
+  --color-aqua: #00dfce;
 }
 
 html {
@@ -48,6 +49,24 @@ button {
   font-weight: 700;
 }
 
+.button_second {
+  margin-top: 40px;
+  padding: 14px 40px;
+  border: 2px solid var(--color-brown);
+  font-size: 18px;
+  line-height: 25px;
+
+  &:hover {
+    background-color: var(--color-orange);
+    border: 2px solid var(--color-transparent);
+  }
+
+  &:active {
+    background-color: var(--color-dark-orange);
+    border: 2px solid var(--color-transparent);
+  }
+}
+
 .container-main {
   max-width: 1440px;
   margin: 0 auto;
@@ -69,6 +88,13 @@ button {
   @media (max-width: $breakpoint_xs) {
     max-width: auto;
   }
+}
+
+.container-flex {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1 {

@@ -1,0 +1,23 @@
+@import "../../assets/styles/variables.scss";
+
+.our-advantage {
+  padding: 130px 10px;
+  @media (max-width: $breakpoint_sm) {
+    padding: 70px 10px;
+  }
+  .our-advantage-label {
+    padding: 6px 10px;
+    background-color: var(--background-color-light-orange);
+    color: var(--color-white);
+  }
+
+  .our-advantage-wrapper-title {
+    text-align: center;
+    .our-advantage__title {
+      margin-top: 40px;
+      @media (max-width: $breakpoint_xs) {
+        display: none;
+      }
+    }
+  }
+}

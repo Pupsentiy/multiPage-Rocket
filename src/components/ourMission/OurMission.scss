@@ -2,14 +2,11 @@
 
 .our-mission {
   padding: 130px 10px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
 
-  @media (max-width: $breakpoint_xs) {
-   padding: 70px 10px;
+  @media (max-width: $breakpoint_sm) {
+    padding: 70px 10px;
   }
+
   .our-mission-label {
     padding: 6px 14px;
     color: var(--color-white);
@@ -39,24 +36,6 @@
     @media (max-width: $breakpoint_sm) {
       font-size: 16px;
       line-height: 18px;
-    }
-  }
-
-  .our-mission__button {
-    margin-top: 40px;
-    padding: 14px 40px;
-    border: 2px solid var(--color-brown);
-    font-size: 18px;
-    line-height: 25px;
-
-    &:hover {
-      background-color: var(--color-orange);
-      border: 2px solid var(--color-transparent);
-    }
-
-    &:active {
-      background-color: var(--color-dark-orange);
-      border: 2px solid var(--color-transparent);
     }
   }
 }

@@ -3,3 +3,9 @@ export type THeaderLink = {
   title: string;
   link: string;
 };
+
+export type TAdvantages = {
+  id: number;
+  title: string;
+  desc: string;
+};
