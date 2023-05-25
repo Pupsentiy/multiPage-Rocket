@@ -9,3 +9,10 @@ export type TAdvantages = {
   title: string;
   desc: string;
 };
+
+export type TServiceCards = {
+  id: number;
+  title: string;
+  desc: string;
+  classNameProps:string;
+};

@@ -8,7 +8,11 @@
   --background-color-brown: #331110;
   --background-color-light-orange: #ffa220;
   --background-color-orage: #f98a09;
-  --background-colot-beige: #f3eeea;
+  --background-color-dark-orange: #d66300;
+  --background-color-beige: #f3eeea;
+  --background-color-blue: #005ddf;
+  --background-color-aqua: #00dfce;
+  --background-color-transparent: "transparent";
 
   --color-brown: #331110;
   --color-orange: #f98a09;
@@ -35,6 +39,11 @@ body {
   font-family: $default-font;
   color: var(--color-brown);
   background-color: var(--background-color-light);
+
+  @media (max-width: $breakpoint_xs) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 a {
