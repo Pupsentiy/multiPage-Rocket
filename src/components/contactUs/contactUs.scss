@@ -1,0 +1,22 @@
+@import '../../assets/styles/variables.scss';
+
+.contact-us {
+  padding: 90px 10px;
+  background-color: var(--background-color-orage);
+  .contact-us__title {
+  }
+
+  .contact-us__subtitle {
+    margin-top: 20px;
+    width: 55%;
+    text-align: center;
+    @media (max-width: $breakpoint_lg) {
+      width: 100%;
+    }
+  }
+
+  .contact-us__button {
+    margin-top: 40px;
+    padding: 14px 40px;
+  }
+}

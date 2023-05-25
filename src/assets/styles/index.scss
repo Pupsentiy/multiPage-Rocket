@@ -76,6 +76,22 @@ button {
   }
 }
 
+.button-brown {
+  background-color: var(--background-color-brown);
+  color: var(--color-white);
+  border: 2px solid var(--color-transparent);
+  &:hover {
+    background-color: var(--color-white);
+    color: var(--color-brown);
+    border: 2px solid var(--color-transparent);
+  }
+
+  &:active {
+    background-color: var(--color-beige);
+    border: 2px solid var(--color-transparent);
+  }
+}
+
 .container-main {
   max-width: 1440px;
   margin: 0 auto;
@@ -111,6 +127,7 @@ h1 {
   font-weight: 700;
   font-size: 40px;
   line-height: 50px;
+  text-align: center;
   color: var(--color-brown);
 
   @media (max-width: $breakpoint_sm) {

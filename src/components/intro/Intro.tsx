@@ -28,7 +28,7 @@ const Intro: FC = () => {
           <a href="#!">
             <Button
               type="button"
-              classProps="intro-links__primary intro-link__button"
+              classProps="button-brown intro-link__button"
             >
               Оставить заявку
             </Button>
