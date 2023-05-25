@@ -14,5 +14,12 @@ export type TServiceCards = {
   id: number;
   title: string;
   desc: string;
-  classNameProps:string;
+  classNameProps: string;
+};
+
+export type TStages = {
+  id: number;
+  number: string;
+  title: string;
+  desc: string;
 };

@@ -1,4 +1,9 @@
-import { TAdvantages, THeaderLink, TServiceCards } from "./constants.types";
+import {
+  TAdvantages,
+  THeaderLink,
+  TServiceCards,
+  TStages,
+} from "./constants.types";
 
 export const headerLink: THeaderLink[] = [
   { id: 0, title: "Главная", link: "#!" },
@@ -21,7 +26,12 @@ export const serviceCards: TServiceCards[] = [
     desc: "Описание",
     classNameProps: "service-container-card_blue",
   },
-  { id: 1, title: "Дизайн", desc: "Описание", classNameProps: "service-container-card_aqua" },
+  {
+    id: 1,
+    title: "Дизайн",
+    desc: "Описание",
+    classNameProps: "service-container-card_aqua",
+  },
   {
     id: 2,
     title: "Мобильная разработка",
@@ -33,5 +43,32 @@ export const serviceCards: TServiceCards[] = [
     title: "WEb-разработка",
     desc: "Описание",
     classNameProps: "service-container-card_dark-orange",
+  },
+];
+
+export const stages: TStages[] = [
+  {
+    id: 0,
+    number: "1",
+    title: "ЭТАП",
+    desc: "Описание",
+  },
+  {
+    id: 1,
+    number: "2",
+    title: "ЭТАП",
+    desc: "Описание",
+  },
+  {
+    id: 2,
+    number: "3",
+    title: "ЭТАП",
+    desc: "Описание",
+  },
+  {
+    id: 3,
+    number: "4",
+    title: "ЭТАП",
+    desc: "Описание",
   },
 ];

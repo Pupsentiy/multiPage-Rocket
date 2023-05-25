@@ -1,9 +1,9 @@
 @import "../../assets/styles/variables.scss";
 
 .our-advantage {
-  padding: 130px 10px;
+  padding: 130px 16px;
   @media (max-width: $breakpoint_sm) {
-    padding: 70px 10px;
+    padding: 70px 16px;
   }
   .our-advantage-label {
     padding: 6px 10px;

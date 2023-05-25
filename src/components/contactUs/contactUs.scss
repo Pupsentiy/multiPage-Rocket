@@ -1,8 +1,11 @@
-@import '../../assets/styles/variables.scss';
+@import "../../assets/styles/variables.scss";
 
 .contact-us {
-  padding: 90px 10px;
+  padding: 90px 16px;
   background-color: var(--background-color-orage);
+  @media (max-width: $breakpoint_sm) {
+    padding: 70px 16px;
+  }
   .contact-us__title {
   }
 
