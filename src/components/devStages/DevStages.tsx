@@ -10,7 +10,7 @@ const DevStages: FC = () => {
     <section className="dev-stages">
       <div className="container-main">
         <div className="container-flex">
-          <h1>ЭТАПЫ РАЗРАБОТКИ</h1>
+          <h2>ЭТАПЫ РАЗРАБОТКИ</h2>
           <p className="dev-stages__description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
             molestias ad sequi est officia error voluptas? Exercitationem

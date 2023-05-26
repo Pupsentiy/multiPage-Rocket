@@ -86,19 +86,7 @@
         width: 100%;
         padding: 12px 10px;
         margin-top: auto;
-        background-color: var(--background-color-transparent);
-        border: 2px solid var(--color-white);
-        color: var(--color-white);
-        &:hover {
-          border: 2px solid var(--color-transparent);
-          background-color: var(--color-white);
-          color: var(--color-brown);
-        }
-
-        &:active {
-          background-color: var(--color-beige);
-          border: 2px solid var(--color-transparent);
-        }
+        
       }
     }
   }

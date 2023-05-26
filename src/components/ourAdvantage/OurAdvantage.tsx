@@ -17,9 +17,9 @@ const OurAdvantage: FC = () => {
           </div>
 
           <div className="our-advantage-wrapper-title">
-            <h1 className="our-advantage__title">
+            <h2 className="our-advantage__title">
               ВОТ СЮДА ДОБАВИТЬ ЗАГОЛОВОК
-            </h1>
+            </h2>
           </div>
           <Accordion items={advantages} />
           <Button type="button" classProps="button_second">

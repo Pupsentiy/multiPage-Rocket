@@ -4,7 +4,7 @@
 
 :root {
   --background-color-white: #fff;
-  --background-color-light-grey: #F5F5F5;
+  --background-color-light-grey: #f5f5f5;
   --background-color-dark: #000;
   --background-color-brown: #331110;
   --background-color-light-orange: #ffa220;
@@ -14,6 +14,7 @@
   --background-color-blue: #005ddf;
   --background-color-aqua: #00dfce;
   --background-color-transparent: "transparent";
+  --background-color-pink: #c5006c;
 
   --color-brown: #331110;
   --color-orange: #f98a09;
@@ -22,7 +23,7 @@
   --color-beige: #f3eeea;
   --color-transparent: transparent;
   --color-aqua: #00dfce;
-  --color-blue:#005ddf;
+  --color-blue: #005ddf;
 }
 
 html {
@@ -78,6 +79,22 @@ button {
   }
 }
 
+.button-transparent {
+  background-color: var(--background-color-transparent);
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  &:hover {
+    border: 2px solid var(--color-transparent);
+    background-color: var(--color-white);
+    color: var(--color-brown);
+  }
+
+  &:active {
+    background-color: var(--color-beige);
+    border: 2px solid var(--color-transparent);
+  }
+}
+
 .button-brown {
   background-color: var(--background-color-brown);
   color: var(--color-white);
@@ -125,6 +142,13 @@ button {
 }
 
 h1 {
+  font-family: $poppins-font;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+}
+
+h2 {
   font-family: $poppins-font;
   font-weight: 700;
   font-size: 40px;

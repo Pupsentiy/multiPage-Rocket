@@ -1,0 +1,124 @@
+@import "../../assets/styles/variables.scss";
+
+.swiper {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  margin-top: 28px;
+  .swiper-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+
+    .swiper-slide {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      overflow: hidden;
+      @media (max-width: $breakpoint_xl) {
+        align-items: center;
+      }
+      .slide {
+        width: 100%;
+        min-width: 100%;
+        overflow: hidden;
+        padding: 0 80px;
+        display: flex;
+        @media (max-width: $breakpoint_xl) {
+          padding: 28px 0 0 0;
+          min-height: auto;
+          height: 420px;
+          width: auto;
+          min-width: auto;
+          @media (max-width: $breakpoint_xs) {
+            height: 300px;
+            padding-bottom: 20px;
+          }
+        }
+        .slide-container-flex {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @media (max-width: $breakpoint_xl) {
+            flex-direction: column;
+            height: 100%;
+            max-width: 660px;
+          }
+          .slide-block-text {
+            width: 42%;
+            height: 100%;
+            color: var(--color-white);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            @media (max-width: $breakpoint_xl) {
+              width: 100%;
+              padding: 0 28px;
+            }
+            .slide-main-label {
+              padding: 6px 10px;
+              background-color: var(--background-color-dark-orange);
+            }
+
+            .sliede-block-text__name {
+              margin-top: 20px;
+              @media (max-width: $breakpoint_xl) {
+                font-size: 40px;
+                line-height: 50px;
+              }
+            }
+
+            .slide-block-text__sibtitle {
+              margin-top: 20px;
+              width: 75%;
+              @media (max-width: $breakpoint_xl) {
+                width: 100%;
+              }
+            }
+
+            .slide-block-text__button {
+              padding: 14px 40px;
+              margin-top: 80px;
+            }
+          }
+
+          .slide-block-wrapper-img {
+            width: 58%;
+            display: flex;
+            justify-content: center;
+            @media (max-width: $breakpoint_xl) {
+              width: 100%;
+              margin-top: 20px;
+            }
+            @media (max-width: $breakpoint_xs) {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .blue {
+        background-color: var(--background-color-blue);
+      }
+      .pink {
+        background-color: var(--background-color-pink);
+      }
+
+      .aqua {
+        background-color: var(--background-color-aqua);
+      }
+    }
+  }
+}

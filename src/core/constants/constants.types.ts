@@ -23,3 +23,12 @@ export type TStages = {
   title: string;
   desc: string;
 };
+
+export type TProjects = {
+  id: number;
+  name: string;
+  subTitle: string;
+  img: string;
+  classColorProps: string;
+  link:string;
+};

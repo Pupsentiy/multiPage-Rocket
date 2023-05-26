@@ -8,13 +8,13 @@ const Intro: FC = () => {
   return (
     <section className="intro">
       <div className="container-main">
-        <h1 className="intro__title">
+        <h2 className="intro__title">
           РАЗРАБОТАЙТЕ СВОЕ ПРИЛОЖЕНИЕ
           <br />
           <span>БЫСТРЕЕ, КАЧЕСТВЕННЕЕ И ДЕШЕВЛЕ</span> <br />
           С ПОМОЩЬЮ
           <br className="intro-br" /> <span>РОКЕТСОФТ</span>
-        </h1>
+        </h2>
 
         <div className="intro-links">
           <a href="#!">

@@ -13,11 +13,11 @@ const OurMission: FC = () => {
           </div>
 
           <div className="our-mission-wrapper-title">
-            <h1 className="our-mission__title">
+            <h2 className="our-mission__title">
               ЭКОНОМИЧЕСКИ ЭФФЕКТИВНАЯ РАЗРАБОТКА
               <br />
               <span>МОБИЛЬНЫХ ПРИЛОЖЕНИЙ</span>
-            </h1>
+            </h2>
           </div>
 
           <p className="our-mission__description">

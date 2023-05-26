@@ -8,7 +8,7 @@ const ContactUs: FC = () => {
     <section className="contact-us">
       <div className="container-main">
         <div className="container-flex">
-          <h1 className="contact-us__title">ПОЯВИЛИСЬ ВОПРОСЫ?</h1>
+          <h2 className="contact-us__title">ПОЯВИЛИСЬ ВОПРОСЫ?</h2>
 
           <p className="contact-us__subtitle">
             Не стесняйтесь связаться с нами в удобное для вас время по почте или
