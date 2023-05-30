@@ -117,6 +117,7 @@ export const projectsTab: TProjects[] = [
       "Британский стартап, который заставляет переосмыслить подход к сдаче студенческого жилья в аренду",
     img: letMeHomeTab,
     classColorProps: "blue",
+    classColorPropsBtnSm: "blue-btn",
     link: "!#",
   },
   {
@@ -126,6 +127,7 @@ export const projectsTab: TProjects[] = [
       "Помогает путешественникам общаться друг с другом  и зарабатывать деньги на своих приключениях",
     img: onlifeHomeTab,
     classColorProps: "aqua",
+    classColorPropsBtnSm: "aqua-btn",
     link: "!#",
   },
   {
@@ -135,6 +137,7 @@ export const projectsTab: TProjects[] = [
       "Приложение помогающее бросить курить с помощью ежедневных мотивационных советов",
     img: dontSmokeHomeTab,
     classColorProps: "pink",
+    classColorPropsBtnSm: "pink-btn",
     link: "!#",
   },
 ];

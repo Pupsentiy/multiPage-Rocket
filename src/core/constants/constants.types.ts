@@ -30,5 +30,6 @@ export type TProjects = {
   subTitle: string;
   img: string;
   classColorProps: string;
-  link:string;
+  classColorPropsBtnSm?: string;
+  link: string;
 };
