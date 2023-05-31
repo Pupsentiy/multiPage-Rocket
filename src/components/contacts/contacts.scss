@@ -1,0 +1,108 @@
+@import "../../assets/styles/variables.scss";
+
+.contacts {
+  padding: 130px 16px;
+  @media (max-width: $breakpoint_sm) {
+    padding: 70px 16px;
+  }
+  .contacts-container {
+    @media (max-width: $breakpoint_xl) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .conrtacts-label {
+      padding: 6px 10px;
+      color: var(--color-white);
+      background-color: var(--background-color-aqua);
+    }
+
+    .contacts-wrapper-content {
+      display: flex;
+      .contacts-block-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        margin-top: 85px;
+        width: 70%;
+        @media (max-width: $breakpoint_xl) {
+          width: 100%;
+          margin-top: 20px;
+          align-items: center;
+        }
+        .contacts-block-left__title {
+          &:last-of-type{
+            color:var(--color-orange)
+          }
+        }
+
+        .contacts-block-left__subtitle {
+          margin-top: 20px;
+          width: 58%;
+          @media (max-width: $breakpoint_xl) {
+            width: 75%;
+            text-align: center;
+          }
+
+          @media (max-width: $breakpoint_lg) {
+           width: 100%;
+          }
+        }
+
+        .contct-block-left__button {
+          background-color: var(--color-orange);
+          padding: 10px 40px;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 25px;
+          margin-top: 40px;
+
+          @media (max-width: $breakpoint_xl) {
+            margin-left: 12px;
+          }
+
+          &:hover {
+            border: 2px solid var(--color-brown);
+            padding: 8px 26px;
+            background-color: transparent;
+          }
+
+          &:active {
+            background-color: var(--color-dark-orange);
+            padding: 10px 28px;
+            border: none;
+          }
+        }
+      }
+
+      .contacts-block-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 30%;
+        @media (max-width: $breakpoint_xl) {
+          display: none;
+        }
+        .contacts-email {
+          margin-top: 30px;
+          p {
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 18px;
+          }
+        }
+
+        .contacts-address {
+          margin-top: 30px;
+          p {
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+}

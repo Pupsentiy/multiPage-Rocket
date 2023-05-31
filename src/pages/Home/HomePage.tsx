@@ -1,4 +1,5 @@
 import ContactUs from "../../components/contactUs/ContactUs";
+import Contacts from "../../components/contacts/Contacts";
 import DevStages from "../../components/devStages/DevStages";
 import Intro from "../../components/intro/Intro";
 import OurAdvantage from "../../components/ourAdvantage/OurAdvantage";
@@ -18,6 +19,7 @@ const Home = () => {
       <DevStages />
       <OurProjects />
       <Reviews />
+      <Contacts />
     </>
   );
 };
