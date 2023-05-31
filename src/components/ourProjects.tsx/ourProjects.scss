@@ -1,11 +1,202 @@
+@import "../../assets/styles/variables.scss";
+
 .our-projects {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding-bottom: 70px;
+  @media (max-width: $breakpoint_xl) {
+    padding-bottom: 70px;
+  }
   .our-projects-label {
     padding: 6px 10px;
     background-color: var(--background-color-dark-orange);
     margin: 0 auto;
+  }
+
+  .swiper {
+    overflow: hidden;
+    position: relative;
+    margin-top: 28px;
+    .swiper-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative;
+
+      .swiper-slide {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        overflow: hidden;
+        align-items: center;
+        .slide {
+          width: 100%;
+          min-width: 100%;
+          overflow: hidden;
+          padding: 0 80px;
+          position: relative;
+
+          @media (max-width: $breakpoint_xl) {
+            padding: 28px 0 0 0;
+            min-height: auto;
+            height: 420px;
+            width: auto;
+            min-width: auto;
+          }
+
+          @media (max-width: $breakpoint_sm) {
+            padding: 5px;
+            height: 100%;
+          }
+          @media (max-width: $breakpoint_xs) {
+            height: 270px;
+          }
+          .swiper-slide-container {
+            @media (max-width: $breakpoint_xl) {
+              margin: 0;
+            }
+            .slide-container-flex {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              @media (max-width: $breakpoint_xl) {
+                flex-direction: column;
+                height: 100%;
+                max-width: 660px;
+              }
+              .slide-block-text {
+                width: 42%;
+                height: 100%;
+                color: var(--color-white);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+
+                @media (max-width: $breakpoint_xl) {
+                  width: 100%;
+                  padding: 0 28px;
+                }
+
+                @media (max-width: $breakpoint_sm) {
+                  padding: 0 10px;
+                }
+                .slide-main-label {
+                  padding: 6px 10px;
+                  background-color: var(--background-color-dark-orange);
+                }
+
+                .sliede-block-text__name {
+                  margin-top: 20px;
+                  @media (max-width: $breakpoint_xl) {
+                    font-size: 40px;
+                    line-height: 50px;
+                  }
+                  @media (max-width: $breakpoint_xs) {
+                    margin-top: 5px;
+                  }
+                }
+
+                .slide-block-text__sibtitle {
+                  margin-top: 20px;
+                  width: 75%;
+                  @media (max-width: $breakpoint_xl) {
+                    width: 100%;
+                  }
+                }
+
+                .slide-block-text__button {
+                  padding: 14px 40px;
+                  margin-top: 80px;
+                }
+              }
+
+              .slide-block-wrapper-img {
+                width: 58%;
+                display: flex;
+                justify-content: center;
+                @media (max-width: $breakpoint_xl) {
+                  width: 100%;
+                  margin-top: 20px;
+                }
+                @media (max-width: $breakpoint_xs) {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+        a {
+          width: 100%;
+        }
+        .slide-block-text__button-sm {
+          width: 100%;
+          padding: 14px 40px;
+          margin-top: 16px;
+        }
+
+        .blue-btn {
+          border: 2px solid var(--color-blue);
+          color: var(--color-blue);
+          &:hover {
+            background-color: var(--background-color-blue);
+            color: var(--color-white);
+          }
+        }
+        .aqua-btn {
+          border: 2px solid var(--color-aqua);
+          color: var(--color-aqua);
+          &:hover {
+            background-color: var(--background-color-aqua);
+            color: var(--color-white);
+          }
+        }
+
+        .pink-btn {
+          border: 2px solid var(--background-color-pink);
+          color: var(--color-pink);
+          &:hover {
+            background-color: var(--background-color-pink);
+            color: var(--color-white);
+          }
+        }
+
+        .blue {
+          background-color: var(--background-color-blue);
+          display: flex;
+          width: 100%;
+          @media (max-width: $breakpoint_xs) {
+            align-items: flex-start;
+          }
+        }
+        .pink {
+          background-color: var(--background-color-pink);
+          display: flex;
+          width: 100%;
+
+          @media (max-width: $breakpoint_xs) {
+            align-items: flex-start;
+          }
+        }
+
+        .aqua {
+          background-color: var(--background-color-aqua);
+          display: flex;
+          width: 100%;
+          @media (max-width: $breakpoint_xs) {
+            align-items: flex-start;
+          }
+        }
+      }
+    }
   }
 }

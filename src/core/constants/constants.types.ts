@@ -33,3 +33,12 @@ export type TProjects = {
   classColorPropsBtnSm?: string;
   link: string;
 };
+
+export type TReviews = {
+  id: number;
+  avatar: string;
+  name: string;
+  place: string;
+  workIn: string;
+  comment: string;
+};

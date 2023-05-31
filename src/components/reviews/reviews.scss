@@ -1,0 +1,76 @@
+.rewiews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--background-color-light-grey);
+  padding: 130px 0;
+  .rewiews-label {
+    padding: 6px 10px;
+    background-color: var(--background-color-light-orange);
+    margin: 0 auto;
+  }
+  .swiper {
+    overflow: hidden;
+    position: relative;
+    margin-top: 28px;
+    .swiper-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative;
+
+      .swiper-slide {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        overflow: hidden;
+        align-items: center;
+        width: 550px !important;
+
+        .slide {
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+          padding: 20px 20px 40px 20px;
+          background-color: var(--background-color-white);
+          display: flex;
+
+          .rewiews-wrapper-avatar {
+            width: 15%;
+            margin-right: 30px;
+          }
+          .reviews-wrapper-info {
+            width: 85%;
+
+            .reviews-info__place {
+              margin-top: 15px;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 16px;
+            }
+
+            .reviews-info__work {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 16px;
+              color: var(--color-dark-orange);
+            }
+
+            .reviews-info__comment {
+              margin-top: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

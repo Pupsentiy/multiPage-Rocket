@@ -4,6 +4,7 @@ import Intro from "../../components/intro/Intro";
 import OurAdvantage from "../../components/ourAdvantage/OurAdvantage";
 import OurMission from "../../components/ourMission/OurMission";
 import OurProjects from "../../components/ourProjects.tsx/OurProjects";
+import Reviews from "../../components/reviews/Reviews";
 import Service from "../../components/service/Service";
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <ContactUs />
       <DevStages />
       <OurProjects />
+      <Reviews />
     </>
   );
 };

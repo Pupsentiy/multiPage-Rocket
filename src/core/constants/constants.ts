@@ -2,6 +2,7 @@ import {
   TAdvantages,
   THeaderLink,
   TProjects,
+  TReviews,
   TServiceCards,
   TStages,
 } from "./constants.types";
@@ -10,6 +11,7 @@ import letMeHome from "../../assets/img/projects/letMe-web-home.png";
 import letMeHomeTab from "../../assets/img/projects/letMe.png";
 import onlifeHomeTab from "../../assets/img/projects/onlife.png";
 import dontSmokeHomeTab from "../../assets/img/projects/dontSmoke.png";
+import fotoFeedback from "../../assets/img/feedback/Ellipse 83.svg";
 
 export const headerLink: THeaderLink[] = [
   { id: 0, title: "Главная", link: "#!" },
@@ -139,5 +141,62 @@ export const projectsTab: TProjects[] = [
     classColorProps: "pink",
     classColorPropsBtnSm: "pink-btn",
     link: "!#",
+  },
+];
+
+export const reviews: TReviews[] = [
+  {
+    id: 0,
+    avatar: fotoFeedback,
+    name: "Киселев Александр",
+    place: "Менеджер проектов",
+    workIn: "Academy",
+    comment:
+      "Скоро год, как сотрудничаем с компанией Рокетсофт. Начали работать с самого начала нашего бизнеса. Ребята достаточно быстро разработали приложение для внутренней коммуникации между рабочими командами.",
+  },
+  {
+    id: 1,
+    avatar: fotoFeedback,
+    name: "Киселев Александр",
+    place: "Менеджер проектов",
+    workIn: "Academy",
+    comment:
+      "Скоро год, как сотрудничаем с компанией Рокетсофт. Начали работать с самого начала нашего бизнеса. Ребята достаточно быстро разработали приложение для внутренней коммуникации между рабочими командами.",
+  },
+  {
+    id: 2,
+    avatar: fotoFeedback,
+    name: "Киселев Александр",
+    place: "Менеджер проектов",
+    workIn: "Academy",
+    comment:
+      "Скоро год, как сотрудничаем с компанией Рокетсофт. Начали работать с самого начала нашего бизнеса. Ребята достаточно быстро разработали приложение для внутренней коммуникации между рабочими командами.",
+  },
+  {
+    id: 3,
+    avatar: fotoFeedback,
+    name: "Киселев Александр",
+    place: "Менеджер проектов",
+    workIn: "Academy",
+    comment:
+      "Скоро год, как сотрудничаем с компанией Рокетсофт. Начали работать с самого начала нашего бизнеса. Ребята достаточно быстро разработали приложение для внутренней коммуникации между рабочими командами.",
+  },
+  {
+    id: 4,
+    avatar: fotoFeedback,
+    name: "Киселев Александр",
+    place: "Менеджер проектов",
+    workIn: "Academy",
+    comment:
+      "Скоро год, как сотрудничаем с компанией Рокетсофт. Начали работать с самого начала нашего бизнеса. Ребята достаточно быстро разработали приложение для внутренней коммуникации между рабочими командами.",
+  },
+  {
+    id: 5,
+    avatar: fotoFeedback,
+    name: "Киселев Александр",
+    place: "Менеджер проектов",
+    workIn: "Academy",
+    comment:
+      "Скоро год, как сотрудничаем с компанией Рокетсофт. Начали работать с самого начала нашего бизнеса. Ребята достаточно быстро разработали приложение для внутренней коммуникации между рабочими командами.",
   },
 ];
