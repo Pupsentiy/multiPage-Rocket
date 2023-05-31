@@ -1,3 +1,4 @@
+import Answers from "../../components/answers/Answers";
 import ContactUs from "../../components/contactUs/ContactUs";
 import Contacts from "../../components/contacts/Contacts";
 import DevStages from "../../components/devStages/DevStages";
@@ -20,6 +21,7 @@ const Home = () => {
       <OurProjects />
       <Reviews />
       <Contacts />
+      <Answers />
     </>
   );
 };

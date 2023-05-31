@@ -42,3 +42,15 @@ export type TReviews = {
   workIn: string;
   comment: string;
 };
+
+export type TAnswers = {
+  id: number;
+  title: string;
+  subTitle: string;
+  category: string;
+};
+
+export type TSortItem = {
+  id: number;
+  name: string;
+};
