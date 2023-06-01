@@ -1,7 +1,7 @@
 import {
   TAdvantages,
   TAnswers,
-  THeaderLink,
+  TLink,
   TProjects,
   TReviews,
   TServiceCards,
@@ -15,7 +15,7 @@ import onlifeHomeTab from "../../assets/img/projects/onlife.png";
 import dontSmokeHomeTab from "../../assets/img/projects/dontSmoke.png";
 import fotoFeedback from "../../assets/img/feedback/Ellipse 83.svg";
 
-export const headerLink: THeaderLink[] = [
+export const headerLink: TLink[] = [
   { id: 0, title: "Главная", link: "#!" },
   { id: 1, title: "О нас", link: "#!" },
   { id: 2, title: "Наши проекты", link: "#!" },
@@ -240,4 +240,16 @@ export const sortItem: TSortItem[] = [
   { id: 0, name: "Этапы" },
   { id: 0, name: "Сроки" },
   { id: 0, name: "Тарифы" },
+];
+
+export const footerNavigation: TLink[] = [
+  { id: 0, title: "Главная", link: "#!" },
+  { id: 1, title: "Портфолио", link: "#!" },
+  { id: 2, title: "Услуги", link: "#!" },
+  { id: 3, title: "Контакты", link: "#!" },
+];
+
+export const footerService: TLink[] = [
+  { id: 0, title: "Политика конфиденциальности", link: "#!" },
+  { id: 1, title: "Условия обслуживания", link: "#!" },
 ];

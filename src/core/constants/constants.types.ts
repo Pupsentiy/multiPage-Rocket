@@ -1,4 +1,4 @@
-export type THeaderLink = {
+export type TLink = {
   id: number;
   title: string;
   link: string;
@@ -54,3 +54,5 @@ export type TSortItem = {
   id: number;
   name: string;
 };
+
+

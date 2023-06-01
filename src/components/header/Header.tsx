@@ -6,7 +6,7 @@ import logo from "../../assets/img/header/logo.svg";
 import OpMenuTablet from "../../assets/img/header/menu-default-tablet.svg";
 import OpMenuMob from "../../assets/img/header/menu-default-mobile.svg";
 import { headerLink } from "../../core/constants/constants";
-import { THeaderLink } from "../../core/constants/constants.types";
+import { TLink } from "../../core/constants/constants.types";
 
 import "./header.scss";
 
@@ -20,7 +20,7 @@ const Header: FC = () => {
           </div>
           <nav className="header-nav-desktop">
             {headerLink &&
-              headerLink.map((link: THeaderLink, i: number) => (
+              headerLink.map((link: TLink, i: number) => (
                 <a href={link.link} key={i} className="header-nav__link">
                   {link.title}
                 </a>

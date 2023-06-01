@@ -1,0 +1,153 @@
+@import "../../assets/styles/variables.scss";
+
+.footer {
+  padding: 50px 16px;
+  background-color: var(--background-color-brown);
+  color: var(--color-white);
+  @media (max-width: $breakpoint_lg) {
+    padding: 50px 40px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media (max-width: $breakpoint_lg) {
+      flex-direction: column;
+    }
+    .footer-other {
+      width: 24%;
+      @media (max-width: $breakpoint_lg) {
+        width: 50%;
+      }
+      @media (max-width: $breakpoint_sm) {
+        width: 100%;
+      }
+      .footer-wrepper-logo {
+      }
+      .footer-other__email {
+        margin-top: 60px;
+      }
+
+      .footer-other__address {
+        margin-top: 20px;
+      }
+
+      .footer-other__signature {
+        margin-top: 110px;
+      }
+    }
+
+    .footer-navigation {
+      width: 24%;
+
+      @media (max-width: $breakpoint_lg) {
+        margin-top: 60px;
+        width: 50%;
+      }
+      @media (max-width: $breakpoint_sm) {
+        width: 100%;
+      }
+      .footer-navigation__title {
+        font-weight: 700;
+      }
+
+      .footer-navigation-list {
+        .footer-navigation-list-item {
+          margin-top: 30px;
+          @media (max-width: $breakpoint_lg) {
+            margin-top: 20px;
+          }
+          .footer-navigation-item__link {
+            &:hover {
+              color: var(--color-orange);
+            }
+          }
+        }
+      }
+    }
+
+    .footer-service {
+      width: 24%;
+      @media (max-width: $breakpoint_lg) {
+        margin-top: 60px;
+        width: 50%;
+      }
+      @media (max-width: $breakpoint_sm) {
+        width: 100%;
+      }
+      .footer-service__title {
+        font-weight: 700;
+      }
+
+      .footer-service-list {
+        .footer-service-list-item {
+          margin-top: 30px;
+          @media (max-width: $breakpoint_lg) {
+            margin-top: 20px;
+            width: 50%;
+          }
+          @media (max-width: $breakpoint_sm) {
+            width: 100%;
+          }
+          .footer-service-item__link {
+            &:hover {
+              color: var(--color-orange);
+            }
+          }
+        }
+      }
+    }
+
+    .footer-form {
+      width: 24%;
+      @media (max-width: $breakpoint_lg) {
+        margin-top: 60px;
+        width: 50%;
+      }
+      @media (max-width: $breakpoint_sm) {
+        width: 100%;
+      }
+      .footer-from__title {
+        font-weight: 700;
+      }
+
+      .footer-form-wrapper-input {
+        margin-top: 30px;
+        @media (max-width: $breakpoint_lg) {
+          margin-top: 20px;
+        }
+        .footer-form__input {
+          font-size: 14px;
+          color: var(--color-white);
+          padding: 10px;
+
+          background-color: var(--color-transparent);
+          border: 1px solid #f3eeea;
+          margin-top: 5px;
+        }
+        .footer-from-input__label {
+          position: relative;
+          display: flex;
+          align-items: flex-end;
+          &::after {
+            content: "*";
+            margin-bottom: 10px;
+            margin-left: 5px;
+            color: var(--color-dark-orange);
+          }
+        }
+      }
+
+      .footer-form__button {
+        font-size: 16px;
+        line-height: 22px;
+        padding: 12px 30px;
+      }
+    }
+
+    .footer-other__signature {
+      margin-top: 70px;
+    }
+  }
+}
