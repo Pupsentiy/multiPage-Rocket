@@ -24,3 +24,7 @@ declare module "*.gif" {
   const content: string;
   export default content;
 }
+
+export type PopupClick = MouseEvent & {
+  path: Node[];
+};

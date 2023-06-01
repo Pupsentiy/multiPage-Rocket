@@ -2,6 +2,9 @@
 
 .answers {
   padding: 130px 16px;
+  @media (max-width: $breakpoint_sm) {
+    padding: 70px 16px;
+  }
   .answers-wrapper-title {
     display: flex;
     flex-direction: column;
@@ -9,6 +12,9 @@
     align-items: center;
     width: 50%;
     margin: 0 auto;
+    @media (max-width: $breakpoint_lg) {
+      width: 100%;
+    }
     .answers__title {
       text-transform: uppercase;
     }
@@ -32,24 +38,55 @@
     width: 100%;
     justify-content: center;
     margin-top: 50px;
+    @media (max-width: $breakpoint_sm) {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 20px;
+      border-bottom: 1px solid var(--color-grey);
+      border-left: 1px solid var(--color-grey);
+      border-right: 1px solid var(--color-grey);
+      width: auto;
+    }
+    .answers-label {
+      border-top: 1px solid var(--color-grey);
+    
+      padding: 6px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      text-transform: uppercase;
+      width: 180px;
+      cursor: pointer;
+      img {
+        margin-left: 10px;
+      }
+    }
 
     .answers-sort-item + .answers-sort-item {
       margin-left: 40px;
+      @media (max-width: $breakpoint_sm) {
+        margin-left: 0;
+      }
     }
     .answers-sort-item {
+      @media (max-width: $breakpoint_sm) {
+        padding: 6px 10px;
+      }
       .answers-sort-item__button {
         font-family: $default-font;
         font-weight: 400;
         font-size: 18px;
         line-height: 20px;
 
-        &:hover{
-          color:var(--color-dark-orange)
+        &:hover {
+          color: var(--color-dark-orange);
         }
       }
-      
-      .active{
-        color:var(--color-orange) ;
+
+      .active {
+        color: var(--color-orange);
       }
     }
   }
@@ -57,6 +94,9 @@
   .answers-accordions {
     width: 75%;
     margin: 0 auto;
+    @media (max-width: $breakpoint_xl) {
+      width: 100%;
+    }
 
     .answers-accordion-wrapper {
       background-color: var(--background-color-light-grey);
@@ -75,6 +115,9 @@
         background: var(--color-white);
         display: none;
         height: 0;
+        @media (max-width: $breakpoint_xs) {
+          padding: 15px 15px 0 15px;
+        }
       }
       .open {
         display: block;

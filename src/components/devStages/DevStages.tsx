@@ -3,7 +3,7 @@ import { FC } from "react";
 import { stages } from "../../core/constants/constants";
 import { TStages } from "../../core/constants/constants.types";
 
-import './devStages.scss'
+import "./devStages.scss";
 
 const DevStages: FC = () => {
   return (
@@ -14,13 +14,13 @@ const DevStages: FC = () => {
           <p className="dev-stages__description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
             molestias ad sequi est officia error voluptas? Exercitationem
-            doloribus facilis 
+            doloribus facilis
           </p>
 
           <ul className="dev-stages-wrapper-cards">
             {stages &&
               stages.map((stage: TStages, i: number) => (
-                <li className="dev-stages-card">
+                <li className="dev-stages-card" key={i}>
                   <div className="dev-stages-card__number">{stage.number}</div>
                   <div className="stages-card-text">
                     <h4 className="stages-card-text__title">{stage.title}</h4>
