@@ -1,0 +1,49 @@
+@import "../../../assets/styles/variables.scss";
+
+.our-profile {
+  padding: 130px 16px;
+  background-color: var(--background-color-light-grey);
+  @media (max-width: $breakpoint_sm) {
+    padding: 70px 16px;
+  }
+  .our-profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .our-profile-label {
+      text-align: center;
+      padding: 6px 14px;
+      background-color: var(--background-color-blue);
+      color: var(--color-white);
+    }
+
+    .our-profile__title {
+      width: 40%;
+      margin-top: 20px;
+      @media (max-width: $breakpoint_xxl) {
+        width: 50%;
+      }
+      @media (max-width: $breakpoint_xl) {
+        width: 59%;
+      }
+      @media (max-width: $breakpoint_lg) {
+        width: 75%;
+      }
+      @media (max-width: $breakpoint_md) {
+        width: 90%;
+      }
+      @media (max-width: $breakpoint_sm) {
+        width: 100%;
+      }
+    }
+
+    .our-profile__subtitle {
+      margin-top: 20px;
+      width: 55%;
+      text-align: center;
+      @media (max-width: $breakpoint_lg) {
+        width: 100%;
+      }
+    }
+  }
+}

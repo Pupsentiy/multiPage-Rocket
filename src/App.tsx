@@ -1,13 +1,17 @@
+import { BrowserRouter as Router } from "react-router-dom";
+
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-import HomePage from "./pages/Home/HomePage";
+import InternalRoutes from "./routes/Routes";
 
 function App() {
   return (
     <main>
-      <Header />
-      <HomePage />
-      <Footer />
+      <Router>
+        <Header />
+        <InternalRoutes />
+        <Footer />
+      </Router>
     </main>
   );
 }

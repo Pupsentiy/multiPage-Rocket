@@ -1,0 +1,93 @@
+@import "../../../assets/styles/variables.scss";
+
+.our-advantage {
+  padding: 130px 16px;
+  @media (max-width: $breakpoint_sm) {
+    padding: 70px 16px;
+  }
+  .our-advantage-label {
+    padding: 6px 10px;
+    background-color: var(--background-color-light-orange);
+    color: var(--color-white);
+  }
+
+  .our-advantage-wrapper-title {
+    text-align: center;
+    .our-advantage__title {
+      margin-top: 40px;
+      @media (max-width: $breakpoint_xs) {
+        display: none;
+      }
+    }
+  }
+
+  .our-advantage-accordions {
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @media (max-width: $breakpoint_md) {
+      align-items: stretch;
+      justify-content: center;
+      flex-direction: column;
+    }
+    @media (max-width: $breakpoint_lg) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .our-advantage-accordion-wrapper + .our-advantage-accordion-wrapper {
+      margin-left: 40px;
+      @media (max-width: $breakpoint_lg) {
+        margin-left: 0;
+      }
+     
+    }
+    .our-advantage-accordion-wrapper {
+      background-color: var(--background-color-beige);
+      padding: 20px;
+      margin-top: 40px;
+      cursor: pointer;
+      width: 32%;
+      @media (max-width: $breakpoint_lg) {
+        width: 100%;
+      }
+      @media (max-width: $breakpoint_sm) {
+        margin-top: 20px;
+      }
+      .our-advantage-accordion-wrapper-title {
+        display: flex;
+        align-items: center;
+        color: var(--color-dark-orange);
+        @media (max-width: $breakpoint_lg) {
+          justify-content: space-between;
+
+        }
+        .our-advantage-accordion-pointer {
+          margin-left: 28px;
+          @media (max-width: $breakpoint_lg) {
+            margin-left: 10px;
+          }
+          @media (max-width: $breakpoint_md) {
+            margin-left: 28px;
+          }
+        }
+      }
+      .our-advantage-accordion-wrapper-description {
+        height: 0;
+        transition: height ease 0.3s;
+        p {
+          display: none;
+        }
+      }
+
+      .open {
+        margin-top: 20px;
+        height: 180px;
+
+        p {
+          display: block;
+        }
+      }
+    }
+  }
+}

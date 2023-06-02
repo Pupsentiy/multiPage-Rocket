@@ -5,10 +5,10 @@ import Button from "../button/Button";
 import logo from "../../assets/img/header/logo.svg";
 import OpMenuTablet from "../../assets/img/header/menu-default-tablet.svg";
 import OpMenuMob from "../../assets/img/header/menu-default-mobile.svg";
-import { headerLink } from "../../core/constants/constants";
-import { TLink } from "../../core/constants/constants.types";
 
 import "./header.scss";
+import { NavLink } from "react-router-dom";
+import { routesConfig } from "../../routes/routesConfig";
 
 const Header: FC = () => {
   return (
@@ -19,12 +19,13 @@ const Header: FC = () => {
             <img src={logo} alt="logo" />
           </div>
           <nav className="header-nav-desktop">
-            {headerLink &&
-              headerLink.map((link: TLink, i: number) => (
-                <a href={link.link} key={i} className="header-nav__link">
-                  {link.title}
-                </a>
-              ))}
+            {Object.values(routesConfig).map(
+              ({ path, title }, index: number) => (
+                <NavLink key={index} to={path} className="header-nav__link">
+                  {title}
+                </NavLink>
+              )
+            )}
             <Button type="button" classProps="header-nav__button">
               оставить заявку
             </Button>

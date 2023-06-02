@@ -1,12 +1,13 @@
 import { FC } from "react";
+import { NavLink } from "react-router-dom";
 
 import Button from "../button/Button";
 import Input from "../input/Input";
 
 import {
-  footerNavigation,
   footerService,
 } from "../../core/constants/constants";
+import { routesConfig } from "../../routes/routesConfig";
 import { TLink } from "../../core/constants/constants.types";
 
 import { useWindowSize } from "../../hooks/hooks";
@@ -30,26 +31,29 @@ const Footer: FC = () => {
               Россия, г. Москва ул. Производственная 11/8
             </p>
 
-            {width > 992 && <p className="footer-other__signature">© РокетСофт 2022</p>}
+            {width > 992 && (
+              <p className="footer-other__signature">© РокетСофт 2022</p>
+            )}
           </div>
 
           <div className="footer-navigation">
             <p className="footer-navigation__title">Навигация</p>
             <ul className="footer-navigation-list">
-              {footerNavigation &&
-                footerNavigation.map((item: TLink, i: number) => (
-                  <li className="footer-navigation-list-item" key={i}>
-                    <a
-                      href={item.link}
+              {Object.values(routesConfig).map(
+                ({ path, title }, index: number) => (
+                  <li className="footer-navigation-list-item" key={index}>
+                    <NavLink
+                      key={index}
+                      to={path}
                       className="footer-navigation-item__link"
                     >
-                      {item.title}
-                    </a>
+                      {title}
+                    </NavLink>
                   </li>
-                ))}
+                )
+              )}
             </ul>
           </div>
-
           <div className="footer-service">
             <p className="footer-service__title">Обслуживание</p>
             <ul className="footer-service-list">
@@ -82,11 +86,16 @@ const Footer: FC = () => {
                 classLabel="footer-from-input__label"
               />
             </div>
-            <Button type="submit" classProps="footer-form__button button-transparent">
+            <Button
+              type="submit"
+              classProps="footer-form__button button-transparent"
+            >
               отправить
             </Button>
           </form>
-          {width < 992 && <p className="footer-other__signature">© РокетСофт 2022</p>}
+          {width < 992 && (
+            <p className="footer-other__signature">© РокетСофт 2022</p>
+          )}
         </div>
       </div>
     </footer>
