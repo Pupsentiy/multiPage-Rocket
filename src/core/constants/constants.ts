@@ -115,6 +115,7 @@ export const projectsTab: TProjects[] = [
     classColorProps: "blue",
     classColorPropsBtnSm: "blue-btn",
     link: "!#",
+    category: "Дизайн системы",
   },
   {
     id: 1,
@@ -125,6 +126,7 @@ export const projectsTab: TProjects[] = [
     classColorProps: "aqua",
     classColorPropsBtnSm: "aqua-btn",
     link: "!#",
+    category: "Продукты и сервисы",
   },
   {
     id: 2,
@@ -135,6 +137,7 @@ export const projectsTab: TProjects[] = [
     classColorProps: "pink",
     classColorPropsBtnSm: "pink-btn",
     link: "!#",
+    category: "Продукты и сервисы",
   },
 ];
 
@@ -228,13 +231,19 @@ export const answers: TAnswers[] = [
 
 export const sortItem: TSortItem[] = [
   { id: 0, name: "Все" },
-  { id: 0, name: "Разработка" },
-  { id: 0, name: "Этапы" },
-  { id: 0, name: "Сроки" },
-  { id: 0, name: "Тарифы" },
+  { id: 1, name: "Разработка" },
+  { id: 2, name: "Этапы" },
+  { id: 3, name: "Сроки" },
+  { id: 4, name: "Тарифы" },
 ];
 
 export const footerService: TLink[] = [
   { id: 0, title: "Политика конфиденциальности", link: "#!" },
   { id: 1, title: "Условия обслуживания", link: "#!" },
+];
+
+export const sortItemProjects: TSortItem[] = [
+  { id: 0, name: "Все" },
+  { id: 1, name: "Продукты и сервисы" },
+  { id: 2, name: "Дизайн системы" },
 ];

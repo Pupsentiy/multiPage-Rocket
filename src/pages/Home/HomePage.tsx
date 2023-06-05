@@ -5,7 +5,7 @@ import DevStages from "../../components/section/devStages/DevStages";
 import Intro from "../../components/section/intro/Intro";
 import OurAdvantage from "../../components/section/ourAdvantage/OurAdvantage";
 import OurMission from "../../components/section/ourMission/OurMission";
-import OurProjects from "../../components/section/ourProjects.tsx/OurProjects";
+import OurProjectsSwiper from "../../components/section/OurProjectsSwiper/OurProjectsSwiper";
 import Reviews from "../../components/section/reviews/Reviews";
 import Service from "../../components/section/service/Service";
 
@@ -18,7 +18,7 @@ const Home = () => {
       <Service />
       <ContactUs />
       <DevStages />
-      <OurProjects />
+      <OurProjectsSwiper />
       <Reviews />
       <Contacts />
       <Answers />

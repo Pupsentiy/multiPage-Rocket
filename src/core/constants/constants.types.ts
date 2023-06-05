@@ -32,6 +32,7 @@ export type TProjects = {
   classColorProps: string;
   classColorPropsBtnSm?: string;
   link: string;
+  category?: string;
 };
 
 export type TReviews = {
@@ -54,5 +55,3 @@ export type TSortItem = {
   id: number;
   name: string;
 };
-
-

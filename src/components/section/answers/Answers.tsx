@@ -52,7 +52,6 @@ const Answers: FC = () => {
     return () => document.body.removeEventListener("click", handleClickOutside);
   }, []);
 
-  console.log(sortRef);
   return (
     <section className="answers">
       <div className="container-main">

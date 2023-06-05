@@ -8,17 +8,17 @@ import { TProjects } from "../../../core/constants/constants.types";
 
 import { useWindowSize } from "../../../hooks/hooks";
 
-import "./ourProjects.scss";
+import "./ourProjectsSwiper.scss";
 
-const OurProjects: FC = () => {
+const OurProjectsSwiper: FC = () => {
   const [width] = useWindowSize();
 
   const items = width > 1200 ? projectsWeb : projectsTab;
   return (
-    <section className="our-projects">
+    <section className="our-projects-swiper">
       {/* {width < 1200 ? <h2>Наши Проекты</h2> : null} */}
       {width < 1200 && (
-        <div className="our-projects-label">
+        <div className="our-projects-swiper-label">
           <h4>ПРОЕКТЫ</h4>
         </div>
       )}
@@ -85,4 +85,4 @@ const OurProjects: FC = () => {
   );
 };
 
-export default OurProjects;
+export default OurProjectsSwiper;
