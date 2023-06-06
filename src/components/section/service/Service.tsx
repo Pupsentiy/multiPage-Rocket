@@ -12,19 +12,28 @@ const Service: FC = () => {
     <section className="service">
       <div className="container-main">
         <div className="container-flex">
-          <div className="service-label">
-            <h4>УСЛУГИ</h4>
-          </div>
-          <div className="service-wrapper-title">
-            <h2 className="service__title">ВОТ СЮДА ДОБАВИТЬ ЗАГОЛОВОК</h2>
-          </div>
-          <p className="service__description">
-            Учитывая, что стоимость разработки мобильных приложений начинается
-            от N рублей, а сроки реализации проекта - всего 6 недель,
-            неудивительно, что стартапы выбирают РокетСофт для создания и
-            развития своего бизнеса
-          </p>
+          {window.location.pathname === "/services" ? (
+            <>
+              <h2 className="service__title-pass-service">УСЛУГИ</h2>
+              <p className="service__description">Предоставляем обширный спектр услуг и дальше описание</p>
+            </>
+          ) : (
+            <>
+              <div className="service-label">
+                <h4>УСЛУГИ</h4>
+              </div>
 
+              <div className="service-wrapper-title">
+                <h2 className="service__title">ВОТ СЮДА ДОБАВИТЬ ЗАГОЛОВОК</h2>
+              </div>
+              <p className="service__description">
+                Учитывая, что стоимость разработки мобильных приложений
+                начинается от N рублей, а сроки реализации проекта - всего 6
+                недель, неудивительно, что стартапы выбирают РокетСофт для
+                создания и развития своего бизнеса
+              </p>
+            </>
+          )}
           <ul className="service-container-card">
             {serviceCards &&
               serviceCards.map((card: TServiceCards, i: number) => (

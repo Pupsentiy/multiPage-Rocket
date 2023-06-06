@@ -2,6 +2,7 @@ import AboutUsPage from "../pages/AboutUs/AboutUsPage";
 import ContactsPage from "../pages/ContactsPage/ContactsPage";
 import HomePage from "../pages/Home/HomePage";
 import OurProjectsPage from "../pages/OurProjectsPage/OurProjectsPage";
+import ServicePage from "../pages/servicePage/ServicePage";
 
 export type TRoutesConfig = {
   [key: string]: {
@@ -30,7 +31,7 @@ export const routesConfig: TRoutesConfig = {
   services: {
     title: "Услуги",
     path: "/services",
-    component: HomePage,
+    component: ServicePage,
   },
   contacts: {
     title: "Контакты",

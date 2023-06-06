@@ -9,6 +9,8 @@
   @media (max-width: $breakpoint_sm) {
     padding: 70px 16px;
   }
+
+ 
   .dev-stages__description {
     width: 75%;
     text-align: center;
@@ -66,6 +68,29 @@
           height: 80px;
         }
       }
+
+      .dev-stages-card__number-pass-services {
+        min-width: 100px;
+        height: 100px;
+        margin-right: 25px;
+        background-color: var(--background-color-dark-orange);
+        font-weight: 700;
+        font-size: 96px;
+        line-height: 46px;
+        font-family: $poppins-font;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-white);
+
+        @media (max-width: $breakpoint_lg) {
+          font-size: 64px;
+          line-height: 46px;
+          min-width: 80px;
+          height: 80px;
+        }
+      }
       .stages-card-text {
         display: flex;
         flex-direction: column;
@@ -73,6 +98,9 @@
         justify-content: space-between;
         .stages-card-text__title {
           color: var(--color-blue);
+        }
+        .stages-card-text__title-pass-services {
+          color: var(--color-dark-orange);
         }
 
         .stages-card-text__subtitle {

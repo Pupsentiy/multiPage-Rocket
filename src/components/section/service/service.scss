@@ -10,7 +10,14 @@
     background-color: var(--background-color-blue);
     color: var(--color-white);
   }
-
+  .service__title-pass-service{
+    @media (max-width: $breakpoint_sm) {
+      margin-top: 60px;
+    }
+    @media (max-width: $breakpoint_xs) {
+      margin-top: 40px;
+    }
+  }
   .service-wrapper-title {
     text-align: center;
     .service__title {

@@ -2,6 +2,7 @@ import {
   TAdvantages,
   TAnswers,
   TLink,
+  TPriceItems,
   TProjects,
   TReviews,
   TServiceCards,
@@ -246,4 +247,16 @@ export const sortItemProjects: TSortItem[] = [
   { id: 0, name: "Все" },
   { id: 1, name: "Продукты и сервисы" },
   { id: 2, name: "Дизайн системы" },
+];
+
+export const priceItems: TPriceItems[] = [
+  {
+    id: 0,
+    title: "Мобильное приложение",
+    time: "От N недель",
+    price: "От N руб",
+  },
+  { id: 1, title: "Сайт", time: "От N недель", price: "От N руб" },
+  { id: 2, title: "Дизайн система", time: "От N недель", price: "От N руб" },
+  { id: 3, title: "Анализ проекта", time: "От N недель", price: "От N руб" },
 ];

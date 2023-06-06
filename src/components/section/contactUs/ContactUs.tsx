@@ -5,7 +5,6 @@ import Button from "../../button/Button";
 import "./contactUs.scss";
 
 const ContactUs: FC = () => {
-  console.log(window.location)
   return (
     <section className="contact-us">
       <div className="container-main">

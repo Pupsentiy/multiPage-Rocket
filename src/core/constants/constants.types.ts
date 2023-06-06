@@ -55,3 +55,10 @@ export type TSortItem = {
   id: number;
   name: string;
 };
+
+export type TPriceItems = {
+  id: number;
+  title: string;
+  time: string;
+  price: string;
+};
