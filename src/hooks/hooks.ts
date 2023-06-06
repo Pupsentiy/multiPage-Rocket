@@ -1,4 +1,5 @@
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState, createContext, useContext } from "react";
+import { TMyGlobalContext } from "../@types/global";
 
 export function useWindowSize() {
   const [size, setSize] = useState([0, 0]);
@@ -6,9 +7,16 @@ export function useWindowSize() {
     function updateSize() {
       setSize([window.innerWidth, window.innerHeight]);
     }
-    window.addEventListener('resize', updateSize);
+    window.addEventListener("resize", updateSize);
     updateSize();
-    return () => window.removeEventListener('resize', updateSize);
+    return () => window.removeEventListener("resize", updateSize);
   }, []);
   return size;
 }
+
+export const myContext = createContext<TMyGlobalContext>({
+  active: true,
+  setActive: (_value:boolean) => {},
+});
+
+export const useGlobalContext = () => useContext(myContext);

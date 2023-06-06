@@ -2,9 +2,13 @@ import { FC } from "react";
 
 import Button from "../../button/Button";
 
+import { useGlobalContext } from "../../../hooks/hooks";
+
 import "./intro.scss";
+import { routesConfig } from "../../../routes/routesConfig";
 
 const Intro: FC = () => {
+  const {  setActive } = useGlobalContext();
   return (
     <section className="intro">
       <div className="container-main">
@@ -17,7 +21,7 @@ const Intro: FC = () => {
         </h2>
 
         <div className="intro-links">
-          <a href="#!">
+          <a href={routesConfig.ourProjects.path}>
             <Button
               type="button"
               classProps=" intro-links__transparent  intro-link__button"
@@ -26,7 +30,7 @@ const Intro: FC = () => {
             </Button>
           </a>
           <a href="#!">
-            <Button type="button" classProps="button-brown intro-link__button">
+            <Button type="button" classProps="button-brown intro-link__button" onClick={() => setActive(true)}>
               Оставить заявку
             </Button>
           </a>

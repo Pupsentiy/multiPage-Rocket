@@ -1,7 +1,10 @@
 import { FC } from "react";
+import { NavLink } from "react-router-dom";
 
 import { serviceCards } from "../../../core/constants/constants";
 import { TServiceCards } from "../../../core/constants/constants.types";
+
+import { routesConfig } from "../../../routes/routesConfig";
 
 import Button from "../../button/Button";
 
@@ -15,7 +18,9 @@ const Service: FC = () => {
           {window.location.pathname === "/services" ? (
             <>
               <h2 className="service__title-pass-service">УСЛУГИ</h2>
-              <p className="service__description">Предоставляем обширный спектр услуг и дальше описание</p>
+              <p className="service__description">
+                Предоставляем обширный спектр услуг и дальше описание
+              </p>
             </>
           ) : (
             <>
@@ -54,10 +59,11 @@ const Service: FC = () => {
                 </li>
               ))}
           </ul>
-
-          <Button type="button" classProps="button_second">
-            Весь перечень услуг
-          </Button>
+          <NavLink to={routesConfig.services.path}>
+            <Button type="button" classProps="button_second">
+              Весь перечень услуг
+            </Button>
+          </NavLink>
         </div>
       </div>
     </section>

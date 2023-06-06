@@ -8,9 +8,12 @@ import { TAdvantages } from "../../../core/constants/constants.types";
 import Down from "../../../assets/img/accordion/arrow-down.svg";
 import Up from "../../../assets/img/accordion/arrow-up.svg";
 
+import { useGlobalContext } from "../../../hooks/hooks";
+
 import "./ourAdvantage.scss";
 
 const OurAdvantage: FC = () => {
+  const {  setActive } = useGlobalContext();
   const [clicked, setClicked] = useState(5);
 
   const handleToggle = (index: number) => {
@@ -68,7 +71,7 @@ const OurAdvantage: FC = () => {
                 </li>
               ))}
           </ul>
-          <Button type="button" classProps="button_second">
+          <Button type="button" classProps="button_second" onClick={() => setActive(true)}>
             оставить заявку
           </Button>
         </div>

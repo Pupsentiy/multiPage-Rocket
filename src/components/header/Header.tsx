@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { NavLink } from "react-router-dom";
 
 import Button from "../button/Button";
 
@@ -6,11 +7,13 @@ import logo from "../../assets/img/header/logo.svg";
 import OpMenuTablet from "../../assets/img/header/menu-default-tablet.svg";
 import OpMenuMob from "../../assets/img/header/menu-default-mobile.svg";
 
-import "./header.scss";
-import { NavLink } from "react-router-dom";
+import { useGlobalContext } from "../../hooks/hooks";
 import { routesConfig } from "../../routes/routesConfig";
 
+import "./header.scss";
+
 const Header: FC = () => {
+  const {  setActive } = useGlobalContext();
   return (
     <header className="header">
       <div className="container-main">
@@ -26,7 +29,7 @@ const Header: FC = () => {
                 </NavLink>
               )
             )}
-            <Button type="button" classProps="header-nav__button">
+            <Button type="button" classProps="header-nav__button" onClick={() => setActive(true)}>
               оставить заявку
             </Button>
           </nav>

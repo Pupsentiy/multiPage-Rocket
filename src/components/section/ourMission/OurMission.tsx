@@ -1,10 +1,14 @@
 import { FC } from "react";
+import { NavLink } from "react-router-dom";
 
 import Button from "../../button/Button";
+
+import { routesConfig } from "../../../routes/routesConfig";
 
 import "./OurMission.scss";
 
 const OurMission: FC = () => {
+
   return (
     <section className="our-mission">
       <div className="container-main">
@@ -28,9 +32,11 @@ const OurMission: FC = () => {
             развития своего бизнеса
           </p>
 
-          <Button type="button" classProps="button_second">
-            связаться с нами
-          </Button>
+          <NavLink to={routesConfig.contacts.path}>
+            <Button type="button" classProps="button_second">
+              связаться с нами
+            </Button>
+          </NavLink>
         </div>
       </div>
     </section>

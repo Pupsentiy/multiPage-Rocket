@@ -58,21 +58,21 @@
           font-size: 18px;
           line-height: 25px;
           margin-top: 40px;
-
+          border: 2px solid var(--color-transparent);
           @media (max-width: $breakpoint_xl) {
             margin-left: 12px;
           }
 
           &:hover {
             border: 2px solid var(--color-brown);
-            padding: 8px 26px;
+            padding: 10px 40px;
             background-color: transparent;
           }
 
           &:active {
             background-color: var(--color-dark-orange);
-            padding: 10px 28px;
-            border: none;
+            padding: 10px 40px;
+            border: 2px solid var(--color-transparent);
           }
         }
       }

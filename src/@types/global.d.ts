@@ -28,3 +28,8 @@ declare module "*.gif" {
 export type PopupClick = MouseEvent & {
   path: Node[];
 };
+
+export type TMyGlobalContext = {
+  active: boolean;
+  setActive: (e: boolean) => void;
+};
