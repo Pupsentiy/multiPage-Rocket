@@ -7,10 +7,10 @@
   }
   .service-label {
     padding: 6px 10px;
-    background-color: var(--background-color-blue);
-    color: var(--color-white);
+    background-color: $background-color-blue;
+    color: $background-color-white;
   }
-  .service__title-pass-service{
+  .service__title-pass-service {
     @media (max-width: $breakpoint_sm) {
       margin-top: 60px;
     }
@@ -37,29 +37,38 @@
   }
 
   .service-container-card_blue {
-    background-color: var(--background-color-blue);
+    background-color: $background-color-blue;
   }
 
   .service-container-card_aqua {
-    background-color: var(--background-color-aqua);
+    background-color: $background-color-aqua;
   }
 
   .service-container-card_orange {
-    background-color: var(--background-color-light-orange);
+    background-color: $background-color-light-orange;
   }
   .service-container-card_dark-orange {
-    background-color: var(--background-color-dark-orange);
+    background-color: $background-color-dark-orange;
   }
 
   .service-container-card {
     width: 100%;
     margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
 
     @media (max-width: $breakpoint_lg) {
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       gap: 20px;
     }
@@ -68,8 +77,13 @@
       padding: 20px;
       width: 300px;
       height: 350px;
-      color: var(--color-white);
+      color: $background-color-white;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
       gap: 20px;
       margin-right: 20px;
@@ -82,9 +96,6 @@
         margin: 0;
       }
 
-      .service-card-wrapper-title {
-      }
-
       .service-card__description {
         margin-top: 10px;
       }
@@ -93,7 +104,6 @@
         width: 100%;
         padding: 12px 10px;
         margin-top: auto;
-        
       }
     }
   }

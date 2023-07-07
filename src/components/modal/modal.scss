@@ -6,21 +6,37 @@
   position: fixed;
   top: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   opacity: 0;
   pointer-events: none;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
   z-index: 10;
   .modal__content {
     padding: 20px;
-    background-color: var(--color-white);
+    background-color: $background-color-white;
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
     transform: scale(0.5);
+    -webkit-transition: 0.4s all;
+    -o-transition: 0.4s all;
     transition: 0.4s all;
 
     .modal-header {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       gap: 10px;
       h4 {
@@ -28,17 +44,24 @@
       }
 
       .modal-header__btn {
-        color: var(--color-dark-orange);
+        color: $color-dark-orange;
         padding: 5px;
         &:hover {
-          color: var(--color-orange);
+          color: $color-orange;
         }
       }
     }
     .modal-form {
       padding: 10px 80px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       font-size: 14px;
       line-height: 16px;
@@ -48,10 +71,10 @@
       }
       .form__input {
         padding: 10px;
-        border: 1px solid var(--color-brown);
+        border: 1px solid $color-brown;
         min-width: 250px;
         &:focus {
-          border: 1px solid var(--color-dark-orange);
+          border: 1px solid $color-dark-orange;
         }
         @media (max-width: $breakpoint_sm) {
           width: 100%;
@@ -60,14 +83,18 @@
 
       .form__input-label {
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
         align-items: flex-end;
         margin-bottom: 5px;
         &::after {
           content: "*";
           margin-bottom: 10px;
           margin-left: 5px;
-          color: var(--color-dark-orange);
+          color: $color-dark-orange;
         }
       }
 
@@ -78,12 +105,17 @@
       }
 
       .modal-block-name {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: 15px;
         @media (max-width: $breakpoint_sm) {
           width: 100%;
         }
         @media (max-width: $breakpoint_md) {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
           flex-direction: column;
           gap: 5px;
         }
@@ -91,44 +123,55 @@
       .modal-block-contacts {
         gap: 15px;
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
         @media (max-width: $breakpoint_sm) {
           width: 100%;
         }
         @media (max-width: $breakpoint_md) {
           gap: 5px;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
           flex-direction: column;
         }
       }
 
       .from-textarea {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
         min-height: 70px;
         padding: 10px;
         width: 100%;
 
-        border: 1px solid var(--color-brown);
+        border: 1px solid $color-brown;
         &:focus {
-          border: 1px solid var(--color-dark-orange);
+          border: 1px solid $color-dark-orange;
         }
         resize: none;
       }
 
       .modal-btn-submit {
-        background-color: var(--color-orange);
+        background-color: $color-orange;
         padding: 10px 28px;
         font-size: 14px;
         line-height: 22px;
         margin-top: 46px;
         &:hover {
-          border: 2px solid var(--color-brown);
+          border: 2px solid $color-brown;
           padding: 8px 26px;
-          background-color: transparent;
+          background-color: $background-color-transparent;
         }
 
         &:active {
-          background-color: var(--color-dark-orange);
+          background-color: $color-dark-orange;
           padding: 10px 28px;
           border: none;
         }
@@ -137,14 +180,15 @@
   }
 
   .modal__content.active {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
     @media (max-width: $breakpoint_sm) {
       margin: 5px;
-     }
+    }
   }
 }
 .modal.active {
   opacity: 1;
   pointer-events: all;
- 
 }

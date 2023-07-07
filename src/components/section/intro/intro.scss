@@ -1,10 +1,16 @@
 @import "../../../assets/styles/variables.scss";
 
 .intro {
-  background-color: var(--background-color-orange);
+  background-color: $background-color-orange;
   padding: 188px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-top: 89px;
   @media (max-width: $breakpoint_lg) {
@@ -21,7 +27,7 @@
     padding: 0 10px;
     span {
       margin-left: 23px;
-      color: var(--color-white);
+      color: $background-color-white;
       &:last-child {
         margin-left: 10px;
       }
@@ -30,7 +36,7 @@
       }
     }
 
-    .intro-br{
+    .intro-br {
       display: none;
       @media (max-width: $breakpoint_xs) {
         display: block;
@@ -39,11 +45,20 @@
   }
 
   .intro-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 40px;
     @media (max-width: $breakpoint_sm) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
     }
 
@@ -52,29 +67,28 @@
       font-size: 18px;
       line-height: 25px;
       @media (max-width: $breakpoint_sm) {
-       font-size: 14px;
-       width: 290px;
+        font-size: 14px;
+        width: 290px;
       }
     }
- 
 
     .intro-links__transparent {
-      background-color: var(--background-color-transparent);
-      border: 2px solid var(--color-white);
-      color: var(--color-white);
+      background-color: $background-color-transparent;
+      border: 2px solid $background-color-white;
+      color: $background-color-white;
       margin-right: 40px;
       @media (max-width: $breakpoint_sm) {
         margin: 0 0 20px 0;
       }
       &:hover {
-        border: 2px solid var(--color-transparent);
-        background-color: var(--color-white);
-        color: var(--color-brown);
+        border: 2px solid $color-transparent;
+        background-color: $background-color-white;
+        color: $color-brown;
       }
 
       &:active {
-        background-color: var(--color-beige);
-        border: 2px solid var(--color-transparent);
+        background-color: $color-beige;
+        border: 2px solid $color-transparent;
       }
     }
   }

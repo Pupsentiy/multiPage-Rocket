@@ -18,14 +18,15 @@ const Reviews: FC = () => {
       </div>
       <Swiper
         className="swiper"
-        // slidesPerView={width < 1440 ? 2.5 : width < 992 ? 2 : 2.2}
-        slidesPerView={1.5}
+        // slidesPerView={width < 1920 ? 3 : width < 1200 ? 3 : 1}
+        slidesPerView={width < 768 ? 1.5 : 3}
+        slidesPerGroup={1}
         grabCursor={true}
         centeredSlides={true}
-        initialSlide={1}
-        spaceBetween={width > 1200 ? 18 : 30}
+        initialSlide={2}
+        spaceBetween={width > 1200 ? 18 : 12}
         // slidesPerGroup={1}
-        speed={1500}
+        speed={700}
       >
         <div className="swiper-wrapper">
           {reviews &&

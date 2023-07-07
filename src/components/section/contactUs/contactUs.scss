@@ -2,11 +2,9 @@
 
 .contact-us {
   padding: 90px 16px;
-  background-color: var(--background-color-orange);
+  background-color: $background-color-orange;
   @media (max-width: $breakpoint_sm) {
     padding: 70px 16px;
-  }
-  .contact-us__title {
   }
 
   .contact-us__subtitle {

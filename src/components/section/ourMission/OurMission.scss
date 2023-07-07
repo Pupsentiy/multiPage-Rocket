@@ -9,8 +9,8 @@
 
   .our-mission-label {
     padding: 6px 14px;
-    color: var(--color-white);
-    background-color: var(--color-aqua);
+    color: $background-color-white;
+    background-color: $color-aqua;
   }
 
   .our-mission-wrapper-title {
@@ -18,7 +18,7 @@
     .our-mission__title {
       text-align: center;
       span {
-        color: var(--color-orange);
+        color: $color-orange;
       }
     }
   }

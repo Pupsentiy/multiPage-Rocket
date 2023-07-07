@@ -2,19 +2,26 @@
 
 .our-profile {
   padding: 130px 16px;
-  background-color: var(--background-color-light-grey);
+  background-color: $background-color-light-grey;
   @media (max-width: $breakpoint_sm) {
     padding: 70px 16px;
   }
   .our-profile-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     .our-profile-label {
       text-align: center;
       padding: 6px 14px;
-      background-color: var(--background-color-blue);
-      color: var(--color-white);
+      background-color: $background-color-blue;
+      color: $background-color-white;
     }
 
     .our-profile__title {

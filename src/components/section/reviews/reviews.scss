@@ -1,12 +1,21 @@
+@import "../../../assets/styles/variables.scss";
+
 .rewiews {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
-  background-color: var(--background-color-light-grey);
+  background-color: $background-color-light-grey;
   padding: 130px 0;
   .rewiews-label {
     padding: 6px 10px;
-    background-color: var(--background-color-light-orange);
+    background-color: $background-color-light-orange;
     margin: 0 auto;
   }
   .swiper {
@@ -33,24 +42,40 @@
         -ms-flex-negative: 0;
         flex-shrink: 0;
         overflow: hidden;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
-        width: 550px !important;
+        -ms-touch-action: none;
+        touch-action: none;
 
         .slide {
           width: 100%;
           overflow: hidden;
           position: relative;
           padding: 20px 20px 40px 20px;
-          background-color: var(--background-color-white);
+          background-color: $background-color-white;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-
+          @media (max-width: $breakpoint_md) {
+            padding: 20px;
+          }
           .rewiews-wrapper-avatar {
             width: 15%;
             margin-right: 30px;
+            @media (max-width: $breakpoint_md) {
+              display: none;
+            }
+            @media (max-width: $breakpoint_xl) {
+              margin-right: 15px;
+              width: auto;
+            }
           }
           .reviews-wrapper-info {
             width: 85%;
-
+            @media (max-width: $breakpoint_md) {
+              width: 100%;
+            }
             .reviews-info__place {
               margin-top: 15px;
               font-weight: 400;
@@ -62,7 +87,7 @@
               font-weight: 400;
               font-size: 14px;
               line-height: 16px;
-              color: var(--color-dark-orange);
+              color: $color-dark-orange;
             }
 
             .reviews-info__comment {

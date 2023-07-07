@@ -3,13 +3,18 @@
 .our-projects {
   margin-top: 89px;
   padding: 101px 16px;
-  .our-projects__title {
-  }
+ 
 
   .our-projects-menu-sort {
     margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 
     .our-projects-menu-item + .our-projects-menu-item {
@@ -26,27 +31,37 @@
       .our-projects-item__btn {
         font-weight: 400;
         &:hover {
-          color: var(--color-orange);
+          color: $color-orange;
         }
       }
       .our-projects-item__btn_active {
         font-weight: 400;
-        color: var(--color-orange);
+        color: $color-orange;
       }
     }
   }
 
   .our-projects-wrapper {
     margin-top: 48px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 30px;
     min-height: 200px;
     .our-projects-project-container {
       width: 48.6%;
       padding: 28px 28px 0 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
       justify-content: flex-end;
       position: relative;
       overflow: hidden;
@@ -60,10 +75,10 @@
           margin-bottom: 20px;
         }
         .our-projects-project__title {
-          color: var(--color-white);
+          color: $background-color-white;
         }
         .our-projects-project__subtitle {
-          color: var(--color-white);
+          color: $background-color-white;
         }
       }
       img {
@@ -74,65 +89,82 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        background-color: var(--color-white);
+        background-color: $background-color-white;
         padding: 14px;
+        -webkit-transform: translateY(50px);
+        -ms-transform: translateY(50px);
         transform: translateY(50px);
         @media (max-width: $breakpoint_xl) {
+          -webkit-transform: none;
+          -ms-transform: none;
           transform: none;
           position: relative;
         }
       }
       .our-projects-project__button_active {
+        -webkit-animation: ani 1s forwards;
         animation: ani 1s forwards;
       }
 
       .aqua-btn {
-        border: solid 1px var(--color-aqua);
+        border: solid 1px $color-aqua;
         border-top: 0px;
         &:hover {
-          border-top: solid 1px var(--color-white);
-          background-color: var(--background-color-aqua);
-          color: var(--color-white);
+          border-top: solid 1px $background-color-white;
+          background-color: $background-color-aqua;
+          color: $background-color-white;
         }
       }
       .blue-btn {
-        border: solid 1px var(--color-blue);
+        border: solid 1px $color-blue;
         border-top: 0px;
         &:hover {
-          border-top: solid 1px var(--color-white);
-          background-color: var(--background-color-blue);
-          color: var(--color-white);
+          border-top: solid 1px $background-color-white;
+          background-color: $background-color-blue;
+          color: $background-color-white;
         }
       }
       .pink-btn {
-        border: solid 1px var(--color-pink);
+        border: solid 1px $color-pink;
         border-top: 0px;
         &:hover {
-          background-color: var(--background-color-pink);
-          color: var(--color-white);
-        border-top: solid 1px var(--color-white);
-          
+          background-color: $background-color-pink;
+          color: $background-color-white;
+          border-top: solid 1px $background-color-white;
         }
       }
     }
 
     .pink {
-      background-color: var(--background-color-pink);
+      background-color: $background-color-pink;
     }
     .aqua {
-      background-color: var(--background-color-aqua);
+      background-color: $background-color-aqua;
     }
     .blue {
-      background-color: var(--background-color-blue);
+      background-color: $background-color-blue;
     }
+  }
+}
+
+@-webkit-keyframes ani {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
 @keyframes ani {
   0% {
+    -webkit-transform: translateY(50px);
     transform: translateY(50px);
   }
   100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }

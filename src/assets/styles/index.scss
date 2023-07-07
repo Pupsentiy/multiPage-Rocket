@@ -2,32 +2,6 @@
 @import "./fonts.scss";
 @import "./variables.scss";
 
-:root {
-  --background-color-white: #fff;
-  --background-color-light-grey: #f5f5f5;
-  --background-color-dark: #000;
-  --background-color-brown: #331110;
-  --background-color-light-orange: #ffa220;
-  --background-color-orange: #f98a09;
-  --background-color-dark-orange: #d66300;
-  --background-color-beige: #f3eeea;
-  --background-color-blue: #005ddf;
-  --background-color-aqua: #00dfce;
-  --background-color-transparent: "transparent";
-  --background-color-pink: #c5006c;
-
-  --color-brown: #331110;
-  --color-orange: #f98a09;
-  --color-dark-orange: #d66300;
-  --color-white: #fff;
-  --color-beige: #f3eeea;
-  --color-transparent: transparent;
-  --color-aqua: #00dfce;
-  --color-blue: #005ddf;
-  --color-pink: #c5006c;
-  --color-grey:#BDBDBD;
-}
-
 html {
   height: 100%;
   margin: 0;
@@ -42,8 +16,8 @@ body {
   line-height: 20px;
   font-weight: 400;
   font-family: $default-font;
-  color: var(--color-brown);
-  background-color: var(--background-color-white);
+  color: $color-brown;
+  background-color: $background-color-white;
 
   @media (max-width: $breakpoint_xs) {
     font-size: 16px;
@@ -66,50 +40,50 @@ button {
 .button_second {
   margin-top: 40px;
   padding: 14px 40px;
-  border: 2px solid var(--color-brown);
+  border: 2px solid $color-brown;
   font-size: 18px;
   line-height: 25px;
 
   &:hover {
-    background-color: var(--color-orange);
-    border: 2px solid var(--color-transparent);
+    background-color: $color-orange;
+    border: 2px solid $color-transparent;
   }
 
   &:active {
-    background-color: var(--color-dark-orange);
-    border: 2px solid var(--color-transparent);
+    background-color: $color-dark-orange;
+    border: 2px solid $color-transparent;
   }
 }
 
 .button-transparent {
-  background-color: var(--background-color-transparent);
-  border: 2px solid var(--color-white);
-  color: var(--color-white);
+  background-color: $background-color-transparent;
+  border: 2px solid $background-color-white;
+  color: $background-color-white;
   &:hover {
-    border: 2px solid var(--color-transparent);
-    background-color: var(--color-white);
-    color: var(--color-brown);
+    border: 2px solid $color-transparent;
+    background-color: $background-color-white;
+    color: $color-brown;
   }
 
   &:active {
-    background-color: var(--color-beige);
-    border: 2px solid var(--color-transparent);
+    background-color: $color-beige;
+    border: 2px solid $color-transparent;
   }
 }
 
 .button-brown {
-  background-color: var(--background-color-brown);
-  color: var(--color-white);
-  border: 2px solid var(--color-transparent);
+  background-color: $background-color-brown;
+  color: $background-color-white;
+  border: 2px solid $color-transparent;
   &:hover {
-    background-color: var(--color-white);
-    color: var(--color-brown);
-    border: 2px solid var(--color-transparent);
+    background-color: $background-color-white;
+    color: $color-brown;
+    border: 2px solid $color-transparent;
   }
 
   &:active {
-    background-color: var(--color-beige);
-    border: 2px solid var(--color-transparent);
+    background-color: $color-beige;
+    border: 2px solid $color-transparent;
   }
 }
 
@@ -137,9 +111,18 @@ button {
 }
 
 .container-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -156,7 +139,7 @@ h2 {
   font-size: 40px;
   line-height: 50px;
   text-align: center;
-  color: var(--color-brown);
+  color: $color-brown;
 
   @media (max-width: $breakpoint_sm) {
     font-size: 28px;
