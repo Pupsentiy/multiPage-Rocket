@@ -113,15 +113,20 @@
         padding: 15px 15px 0 67px;
         transition: height ease 0.3s;
         background: var(--color-white);
-        display: none;
         height: 0;
         @media (max-width: $breakpoint_xs) {
           padding: 15px 15px 0 15px;
         }
+        p{
+          display: none;
+        }
       }
       .open {
-        display: block;
         height: 100%;
+        p{
+          display: block;
+
+        }
       }
     }
   }

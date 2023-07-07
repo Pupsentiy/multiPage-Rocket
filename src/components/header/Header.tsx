@@ -13,7 +13,11 @@ import { routesConfig } from "../../routes/routesConfig";
 import "./header.scss";
 
 const Header: FC = () => {
-  const {  setActive } = useGlobalContext();
+  const { setActiveForm, setActiveBurgerMenu } = useGlobalContext();
+
+  const openBurgerMenu = () => {
+    setActiveBurgerMenu(true);
+  };
   return (
     <header className="header">
       <div className="container-main">
@@ -29,15 +33,27 @@ const Header: FC = () => {
                 </NavLink>
               )
             )}
-            <Button type="button" classProps="header-nav__button" onClick={() => setActive(true)}>
+            <Button
+              type="button"
+              classProps="header-nav__button"
+              onClick={() => setActiveForm(true)}
+            >
               оставить заявку
             </Button>
           </nav>
 
-          <Button classProps="header__active-burgerMenu-tab" type="button">
+          <Button
+            classProps="header__active-burgerMenu-tab"
+            type="button"
+            onClick={() => openBurgerMenu()}
+          >
             <img src={OpMenuTablet} alt="open burger menu" />
           </Button>
-          <Button classProps="header__active-burgerMenu-mobile" type="button">
+          <Button
+            classProps="header__active-burgerMenu-mobile"
+            type="button"
+            onClick={() => openBurgerMenu()}
+          >
             <img src={OpMenuMob} alt="open burger menu" />
           </Button>
         </div>

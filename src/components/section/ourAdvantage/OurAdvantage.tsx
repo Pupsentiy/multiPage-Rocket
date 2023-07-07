@@ -13,7 +13,7 @@ import { useGlobalContext } from "../../../hooks/hooks";
 import "./ourAdvantage.scss";
 
 const OurAdvantage: FC = () => {
-  const {  setActive } = useGlobalContext();
+  const {  setActiveForm } = useGlobalContext();
   const [clicked, setClicked] = useState(5);
 
   const handleToggle = (index: number) => {
@@ -71,7 +71,7 @@ const OurAdvantage: FC = () => {
                 </li>
               ))}
           </ul>
-          <Button type="button" classProps="button_second" onClick={() => setActive(true)}>
+          <Button type="button" classProps="button_second" onClick={() => setActiveForm(true)}>
             оставить заявку
           </Button>
         </div>

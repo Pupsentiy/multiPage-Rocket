@@ -4,11 +4,12 @@ import Button from "../../button/Button";
 
 import { useGlobalContext } from "../../../hooks/hooks";
 
-import "./intro.scss";
 import { routesConfig } from "../../../routes/routesConfig";
 
+import "./intro.scss";
+
 const Intro: FC = () => {
-  const {  setActive } = useGlobalContext();
+  const { setActiveForm } = useGlobalContext();
   return (
     <section className="intro">
       <div className="container-main">
@@ -30,7 +31,11 @@ const Intro: FC = () => {
             </Button>
           </a>
           <a href="#!">
-            <Button type="button" classProps="button-brown intro-link__button" onClick={() => setActive(true)}>
+            <Button
+              type="button"
+              classProps="button-brown intro-link__button"
+              onClick={() => setActiveForm(true)}
+            >
               Оставить заявку
             </Button>
           </a>

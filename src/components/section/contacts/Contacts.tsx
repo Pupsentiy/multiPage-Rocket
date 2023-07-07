@@ -8,7 +8,7 @@ import "./contacts.scss";
 
 const Contacts: FC = () => {
   const [width] = useWindowSize();
-  const { setActive } = useGlobalContext();
+  const { setActiveForm } = useGlobalContext();
 
   return (
     <section className="contacts">
@@ -32,8 +32,12 @@ const Contacts: FC = () => {
                 запутанным. Не позволяйте этому испортить ваш день! Не
                 стесняйтесь связаться с нами в удобное для вас время по почте
                 или заполните заявку, чтобы передать нам более точный запрос
-              </p> 
-              <Button type="button" classProps="contct-block-left__button" onClick={() => setActive(true)}>
+              </p>
+              <Button
+                type="button"
+                classProps="contct-block-left__button"
+                onClick={() => setActiveForm(true)}
+              >
                 ОСТАВИТЬ заявку
               </Button>
             </div>

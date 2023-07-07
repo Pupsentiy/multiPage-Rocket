@@ -1,22 +1,39 @@
 import { BrowserRouter as Router } from "react-router-dom";
+import { Fragment, useState } from "react";
+
+import { myContext } from "./hooks/hooks";
 
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-import InternalRoutes from "./routes/Routes";
-import { useState } from "react";
-import { myContext } from "./hooks/hooks";
 import Modal from "./components/modal/Modal";
+import BurgerMenu from "./components/burgerMenu/BurgerMenu";
+
+import InternalRoutes from "./routes/Routes";
 
 function App() {
-  const [active, setActive] = useState(false);
+  const [activeForm, setActiveForm] = useState<boolean>(false);
+  const [activeBurgerMenu, setActiveBurgerMenu] = useState<boolean>(false);
   return (
     <main>
-      <myContext.Provider value={{ active, setActive }}>
+      <myContext.Provider
+        value={{
+          activeForm,
+          activeBurgerMenu,
+          setActiveForm,
+          setActiveBurgerMenu,
+        }}
+      >
         <Router>
-          <Header />
-          <InternalRoutes />
+          {activeBurgerMenu ? (
+            <BurgerMenu />
+          ) : (
+            <Fragment>
+              <Header />
+              <InternalRoutes />
+              <Footer />
+            </Fragment>
+          )}
           <Modal />
-          <Footer />
         </Router>
       </myContext.Provider>
     </main>

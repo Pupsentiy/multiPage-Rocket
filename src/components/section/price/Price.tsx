@@ -13,7 +13,7 @@ const Price: FC = () => {
         <div className="price-wrapper">
           {priceItems &&
             priceItems.map((item, i) => (
-              <div className="price-item-block">
+              <div className="price-item-block" key={i}>
                 <h4 className="price-item__title">{item.title}</h4>
 
                 <p className="price-item__time">{item.time}</p>

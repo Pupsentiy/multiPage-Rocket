@@ -7,7 +7,7 @@ import { useGlobalContext } from "../../../hooks/hooks";
 import "./contactUs.scss";
 
 const ContactUs: FC = () => {
-  const {  setActive } = useGlobalContext();
+  const { setActiveForm } = useGlobalContext();
   return (
     <section className="contact-us">
       <div className="container-main">
@@ -23,7 +23,11 @@ const ContactUs: FC = () => {
             заполните заявку, чтобы мы ответили на все интересующие вас вопросы
           </p>
 
-          <Button type="button" classProps="contact-us__button button-brown" onClick={() => setActive(true)}>
+          <Button
+            type="button"
+            classProps="contact-us__button button-brown"
+            onClick={() => setActiveForm(true)}
+          >
             ОСТАВИТЬ заявку
           </Button>
         </div>

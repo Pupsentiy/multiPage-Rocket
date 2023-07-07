@@ -15,8 +15,10 @@ export function useWindowSize() {
 }
 
 export const myContext = createContext<TMyGlobalContext>({
-  active: true,
-  setActive: (_value:boolean) => {},
+  activeForm: true,
+  activeBurgerMenu: true,
+  setActiveForm: (_value: boolean) => {},
+  setActiveBurgerMenu: (_value: boolean) => {},
 });
 
 export const useGlobalContext = () => useContext(myContext);

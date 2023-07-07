@@ -1,21 +1,21 @@
 import { FC } from "react";
 
 import Input from "../input/Input";
+import Button from "../button/Button";
 
 import { useGlobalContext } from "../../hooks/hooks";
 
 import "./modal.scss";
-import Button from "../button/Button";
 
 const Modal: FC = () => {
-  const { active, setActive } = useGlobalContext();
+  const { activeForm, setActiveForm } = useGlobalContext();
   return (
     <div
-      className={active ? "modal active" : "modal"}
-      onClick={() => setActive(false)}
+      className={activeForm ? "modal active" : "modal"}
+      onClick={() => setActiveForm(false)}
     >
       <div
-        className={active ? "modal__content active" : "modal__content"}
+        className={activeForm ? "modal__content active" : "modal__content"}
         onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) =>
           e.stopPropagation()
         }
@@ -25,7 +25,7 @@ const Modal: FC = () => {
           <Button
             type="button"
             classProps="modal-header__btn"
-            onClick={() => setActive(false)}
+            onClick={() => setActiveForm(false)}
           >
             X
           </Button>
@@ -68,7 +68,7 @@ const Modal: FC = () => {
           <Button
             type="submit"
             classProps="modal-btn-submit"
-            onClick={() => setActive(false)}
+            onClick={() => setActiveForm(false)}
           >
             отправить
           </Button>

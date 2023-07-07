@@ -1,0 +1,51 @@
+@import "../../assets/styles/variables.scss";
+
+.wrapper-burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  padding: 15px;
+  .wrapper-button-close {
+    width: 100%;
+    display: flex;
+    .burger__button-close {
+      margin-bottom: 15px;
+      margin-left: auto;
+    }
+  }
+
+  .burger-nav-desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .burger-nav__link {
+      font-weight: 700;
+      margin-bottom: 20px;
+      &:hover {
+        color: var(--color-orange);
+      }
+    }
+
+    .burger-nav__button {
+      background-color: var(--color-orange);
+      padding: 10px 28px;
+      font-size: 14px;
+      line-height: 22px;
+
+      &:hover {
+        border: 2px solid var(--color-brown);
+        padding: 8px 26px;
+        background-color: transparent;
+      }
+
+      &:active {
+        background-color: var(--color-dark-orange);
+        padding: 10px 28px;
+        border: none;
+      }
+    }
+  }
+}

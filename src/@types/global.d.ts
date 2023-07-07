@@ -30,6 +30,8 @@ export type PopupClick = MouseEvent & {
 };
 
 export type TMyGlobalContext = {
-  active: boolean;
-  setActive: (e: boolean) => void;
+  activeForm: boolean;
+  activeBurgerMenu: boolean;
+  setActiveForm: (e: boolean) => void;
+  setActiveBurgerMenu: (e: boolean) => void;
 };

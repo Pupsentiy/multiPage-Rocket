@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useCallback, useEffect, useRef, useState } from "react";
 
 import Button from "../../button/Button";
 import Input from "../../input/Input";
@@ -17,9 +17,9 @@ import "./answers.scss";
 
 const Answers: FC = () => {
   const sortRef = useRef<HTMLUListElement>(null);
-  const [clicked, setClicked] = useState(5);
-  const [itemFilter, setItemFilter] = useState(answers);
-  const [sort, setSort] = useState("Все");
+  const [clicked, setClicked] = useState<number>(5);
+  const [itemFilter, setItemFilter] = useState<TAnswers[]>(answers);
+  const [sort, setSort] = useState<string>("Все");
   const [open, setOpen] = useState<boolean>(false);
   const [width] = useWindowSize();
 
@@ -39,6 +39,19 @@ const Answers: FC = () => {
       setItemFilter(newArr);
     }
   };
+
+  const serachQuestion = useCallback((text: string) => {
+    const newArr = answers.filter(
+      (item: TAnswers) =>
+        item.category[0].toLowerCase() === text[0]?.toLowerCase() ||
+        item.category[0].toUpperCase() === text[0]?.toUpperCase()
+    );
+    if (text) {
+      setItemFilter(newArr);
+    } else {
+      setItemFilter(answers);
+    }
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -61,6 +74,9 @@ const Answers: FC = () => {
             type="text"
             classInput="answers-wrapper-title__input"
             placeholder="Найти ответы"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              serachQuestion(e.target.value)
+            }
           />
         </div>
         <ul

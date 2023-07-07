@@ -90,6 +90,7 @@
         border: solid 1px var(--color-aqua);
         border-top: 0px;
         &:hover {
+          border-top: solid 1px var(--color-white);
           background-color: var(--background-color-aqua);
           color: var(--color-white);
         }
@@ -98,6 +99,7 @@
         border: solid 1px var(--color-blue);
         border-top: 0px;
         &:hover {
+          border-top: solid 1px var(--color-white);
           background-color: var(--background-color-blue);
           color: var(--color-white);
         }
@@ -108,6 +110,8 @@
         &:hover {
           background-color: var(--background-color-pink);
           color: var(--color-white);
+        border-top: solid 1px var(--color-white);
+          
         }
       }
     }
